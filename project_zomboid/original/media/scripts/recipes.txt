@@ -1,0 +1,2985 @@
+module Base
+{
+    recipe Make Mortar and Pestle
+	{
+	   Plank,
+	   keep Saw,
+
+	   Result:MortarPestle,
+	   SkillRequired:Woodwork=2,
+	   Sound:PZ_Hammer,
+	   Time:50.0,
+	   Category:Carpentry,
+	}
+
+	recipe Build Spiked Baseball Bat
+	{
+	   BaseballBat,
+	   Nails=5,
+	   keep Hammer/HammerStone,
+
+	   Result:BaseballBatNails,
+	   Sound:PZ_Hammer,
+	   Time:150.0,
+	   Category:Carpentry,
+	   OnCreate:SpikedBat_OnCreate,
+	}
+	recipe Saw Off Shotgun
+	{
+	   Shotgun,
+	   keep Saw,
+
+	   Result:ShotgunSawnoff,
+	   Sound:PZ_Saw,
+	   Time:200.0,
+	   OnCreate:ShotgunSawnoff_OnCreate
+	}
+
+	recipe Build Spiked Plank
+	{
+	   Plank,
+	   Nails=5,
+	   keep Hammer/HammerStone,
+
+	   Result:PlankNail,
+	   Sound:PZ_Hammer,
+	   Time:150.0,
+	   Category:Carpentry,
+	}
+
+	recipe Empty Whisky Bottle
+	{
+	   destroy WhiskeyFull,
+
+	   Result:WhiskeyEmpty,
+	   Time:40.0,
+	   OnGiveXP:NoXP_OnGiveXP,
+	   Category:Cooking,
+	}
+
+    recipe Open Egg Carton
+    {
+       EggCarton,
+
+       Result:Egg=12,
+       Time:5.0,
+       OnCreate:OpenEggCarton_OnCreate,
+       OnGiveXP:NoXP_OnGiveXP,
+       Category:Cooking,
+    }
+
+    recipe Put Eggs in Carton
+    {
+       Egg=12,
+
+       Result:EggCarton,
+       OnGiveXP:NoXP_OnGiveXP,
+       Time:5.0,
+       Category:Cooking,
+    }
+
+	recipe Empty Frying Pan
+	{
+	   destroy PanFriedVegetables,
+
+	   Result:Pan,
+	   OnGiveXP:NoXP_OnGiveXP,
+	   Time:40.0,
+	   Category:Cooking,
+	}
+
+	recipe Empty Roasting Pan
+	{
+	   destroy PanFriedVegetables2,
+
+	   Result:RoastingPan,
+	   OnGiveXP:NoXP_OnGiveXP,
+	   Time:40.0,
+	   Category:Cooking,
+	}
+
+	recipe Rip Clothing
+	{
+	   Sheet/Vest/Shirt/Trousers/Skirt/Blouse/Underwear1/Underwear2,
+
+	   Result:RippedSheets,
+	   Sound:PZ_ClothesRipping,
+	   Time:100.0,
+	   OnCreate:RipClothing_OnCreate,
+	}
+
+	recipe Saw Logs
+	{
+	   Log,
+	   keep Saw,
+
+	   CanBeDoneFromFloor:true,
+	   Result:Plank=3,
+	   Sound:PZ_Saw,
+	   Time:230.0,
+	   Category:Carpentry,
+	   OnGiveXP:GiveSawLogsXP,
+	}
+
+	recipe Make Pot of Soup
+    {
+       TinnedSoupOpen,
+       Pot,
+
+       Result:PotOfSoup,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give3CookingXP,
+    }
+
+	recipe Make Pot of Soup
+	{
+	   TinnedSoup,
+	   keep TinOpener,
+	   Pot,
+
+	   Result:PotOfSoup,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	}
+
+	recipe Open Canned Soup
+    {
+       TinnedSoup,
+       keep TinOpener,
+
+       Result:TinnedSoupOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+	recipe Slice Watermelon
+	{
+	   Watermelon,
+	   keep HuntingKnife/KitchenKnife/Saw/Axe,
+
+	   Result:WatermelonSliced=10,
+	   Time:70.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	}
+
+	recipe Smash Watermelon
+	{
+	   Watermelon,
+	   keep Hammer/HammerStone/Sledgehammer/Log/Plank/BaseballBat/BaseballBatNails,
+
+	   Result:WatermelonSmashed=5,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	}
+
+	recipe Open Canned Beans
+	{
+	   TinnedBeans,
+	   keep TinOpener,
+
+	   Result:OpenBeans,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Open Dog Food
+	{
+	   Dogfood,
+	   keep TinOpener,
+
+	   Result:DogfoodOpen,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Make Beans Bowl
+	{
+	   OpenBeans,
+	   Bowl,
+
+	   Result:BeanBowl,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	}
+
+	recipe Make Beans Bowl
+	{
+	   TinnedBeans,
+	   keep TinOpener,
+	   Bowl,
+
+	   Result:BeanBowl,
+	   Time:120.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	}
+
+	recipe Place Pasta in Saucepan
+	{
+	   Pasta;10,
+	   destroy WaterSaucepan,
+
+	   Result:WaterSaucepanPasta,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Place Rice in Saucepan
+	{
+	   Rice;10,
+	   destroy WaterSaucepan,
+
+	   Result:WaterSaucepanRice,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Place Pasta in Cooking Pot
+	{
+	   Pasta;10,
+	   destroy WaterPot,
+
+	   Result:WaterPotPasta,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Place Rice in Cooking Pot
+	{
+	   Rice;10,
+	   destroy WaterPot,
+
+	   Result:WaterPotRice,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+
+	recipe Open Candy Package
+	{
+	   destroy CandyPackage,
+
+	   Result:Lollipop=5,
+	   Time:5.0,
+	   OnCreate:OpenCandyPackage_OnCreate,
+	   OnGiveXP:NoXP_OnGiveXP,
+	   Category:Cooking,
+	}
+
+	recipe Open Canned Tuna
+	{
+	  TunaTin,
+	  keep TinOpener,
+
+	  Result:TunaTinOpen,
+	  Time:80.0,
+	  Category:Cooking,
+	  OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Make 4 Bowls of Soup
+	{
+	   PotOfSoup/PotOfSoupRecipe,
+	   Bowl=4,
+
+	   Result:SoupBowl=4,
+	   OnCreate:MakeBowlOfSoup4_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Make 4 Bowls of Rice
+	{
+		WaterPotRice,
+		Bowl=4,
+
+		Result:RiceBowl=4,
+		OnCreate:MakeBowlOfSoup4_OnCreate,
+		Time:80.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 4 Bowls of Rice
+	{
+	   RicePan,
+	   Bowl=4,
+
+	   Result:RiceBowl=4,
+	   OnCreate:MakeBowlOfSoup4_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 4 Bowls of Rice
+	{
+	   RicePot,
+	   Bowl=4,
+
+	   Result:RiceBowl=4,
+	   OnCreate:MakeBowlOfSoup4_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Make 2 Bowls of Rice
+	{
+		WaterPotRice,
+		Bowl=2,
+
+		Result:RiceBowl=2,
+		OnCreate:MakeBowlOfSoup2_OnCreate,
+		Time:80.0,
+		Category:Cooking,
+		OnGiveXP:NoXP_OnGiveXP,
+
+	}
+
+    recipe Make 2 Bowls of Rice
+	{
+	   RicePan,
+	   Bowl=2,
+
+	   Result:RiceBowl=2,
+	   OnCreate:MakeBowlOfSoup2_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 2 Bowls of Rice
+	{
+	   RicePot,
+	   Bowl=2,
+
+	   Result:RiceBowl=2,
+	   OnCreate:MakeBowlOfSoup2_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 2 Bowls of Pasta
+	{
+	   PastaPan,
+	   Bowl=2,
+
+	   Result:PastaBowl=2,
+	   OnCreate:MakeBowlOfSoup2_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 2 Bowls of Pasta
+	{
+	   PastaPot,
+	   Bowl=2,
+
+	   Result:PastaBowl=2,
+	   OnCreate:MakeBowlOfSoup2_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 4 Bowls of Pasta
+	{
+	   PastaPan,
+	   Bowl=4,
+
+	   Result:PastaBowl=4,
+	   OnCreate:MakeBowlOfSoup4_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+    recipe Make 4 Bowls of Pasta
+	{
+	   PastaPot,
+	   Bowl=4,
+
+	   Result:PastaBowl=4,
+	   OnCreate:MakeBowlOfSoup4_OnCreate,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Make 2 Bowls of Soup
+    {
+       PotOfSoup/PotOfSoupRecipe,
+       Bowl=2,
+
+       Result:SoupBowl=2,
+       OnCreate:MakeBowlOfSoup2_OnCreate,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make 4 Bowls of Stew
+    {
+       PotOfStew,
+       Bowl=4,
+
+       Result:StewBowl=4,
+       OnCreate:MakeBowlOfStew4_OnCreate,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make 2 Bowls of Stew
+    {
+       PotOfStew,
+       Bowl=2,
+
+       Result:StewBowl=2,
+       OnCreate:MakeBowlOfStew2_OnCreate,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+	recipe Light Candle
+  	{
+   	   Candle,
+   	   Matches/Lighter,
+
+   	   Result:CandleLit,
+	   Time:30.0,
+  	}
+
+  recipe Remove Battery
+   {
+     keep Torch,
+
+     Result:Battery,
+     Time:30,
+     OnTest:TorchBatteryRemoval_TestIsValid,
+     OnCreate:TorchBatteryRemoval_OnCreate,
+   }
+
+   recipe Insert Battery into Flashlight
+   {
+     destroy Torch,
+     destroy Battery,
+
+     Result:Torch,
+     Time:30,
+     OnTest:TorchBatteryInsert_TestIsValid,
+     OnCreate:TorchBatteryInsert_OnCreate,
+   }
+
+      recipe Make Bucket of Plaster
+      {
+        destroy BucketEmpty/BucketWaterFull,
+        Water=5,
+        PlasterPowder,
+
+        Result:BucketPlasterFull,
+        Time:150.0,
+        Category:Carpentry,
+      }
+
+      recipe Build Drawer
+      {
+	    Plank,
+	    Nails,
+	    Doorknob,
+
+	    Result:Drawer,
+	    Time:150.0,
+	    Category:Carpentry,
+	  }
+
+    recipe Craft Sheet Rope
+    {
+	    Sheet/Vest/Shirt/Trousers/Skirt/Blouse,
+
+	    Result:SheetRope,
+	    Time:10.0,
+	}
+
+    recipe Open Box of Jars
+    {
+        BoxOfJars,
+
+        Result:EmptyJar=6,
+        OnCreate:OnOpenBoxOfJars,
+        Sound:PZ_PutInBag,
+        Time:15.0,
+    }
+
+    recipe Open Box of Nails
+    {
+        NailsBox,
+
+        Result:Nails=20,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Open Box of Screws
+    {
+        ScrewsBox,
+
+        Result:Screws=20,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Open Box of Paperclip
+    {
+        PaperclipBox,
+
+        Result:Paperclip=40,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Open Box of 9mm Bullets
+    {
+        BulletsBox,
+
+        Result:Bullets9mm=6,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Open Box of .223 Ammo
+    {
+        223Box,
+
+        Result:223Bullets=8,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Open Box of .308 Ammo
+    {
+        308Box,
+
+        Result:308Bullets=8,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Open Box of Shotgun Shells
+    {
+        ShotgunShellsBox,
+
+        Result:ShotgunShells=4,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place .223 Ammo in Box
+    {
+        223Bullets=40,
+
+        Result:223Box,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place .308 Ammo in Box
+    {
+        308Bullets=40,
+
+        Result:308Box,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place Nails in Box
+    {
+        Nails=100,
+
+        Result:NailsBox,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place Screws in Box
+    {
+        Screws=100,
+
+        Result:ScrewsBox,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place 9mm Bullets in Box
+    {
+        Bullets9mm=30,
+
+        Result:BulletsBox,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place Shotgun Shells in Box
+    {
+        ShotgunShells=24,
+
+        Result:ShotgunShellsBox,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Place Paperclips in Box
+    {
+        Paperclip=40,
+
+        Result:PaperclipBox,
+        Sound:PZ_PutInBag,
+        Time:5.0,
+    }
+
+    recipe Slice Bread
+    {
+        keep KitchenKnife/ButterKnife/HuntingKnife,
+        Bread,
+
+        Result:BreadSlices=3,
+        Sound:PZ_SliceBread,
+        Time:40.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Bread
+    {
+        keep KitchenKnife/ButterKnife/HuntingKnife,
+        BreadDough,
+
+        Result:BreadSlices=3,
+        Sound:PZ_SliceBread,
+        Time:40.0,
+        Category:Cooking,
+        OnTest:SliceBreadDough_TestIsValid,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Make Cake Batter
+    {
+       Bowl,
+       Flour=2,
+       Butter;15,
+       Sugar=3,
+       Egg/WildEggs,
+       Yeast,
+       Milk,
+
+       Result:CakeBatter,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Place Cake in Baking Pan
+    {
+       CakeBatter,
+       BakingPan,
+
+       Result:CakePrep,
+       OnCreate:OnPutCakeBatterInBaking,
+       Time:30.0,
+       Category:Cooking,
+       OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Make Pie Dough
+    {
+       Water=2,
+       Flour=2,
+       Butter;15,
+       Salt;2,
+
+       Result:PieDough,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Make Bread Dough
+    {
+       keep RollingPin,
+       Water=1,
+       Flour=1,
+       Salt;1,
+       Yeast,
+
+       Result:BreadDough,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Prepare Oats Meal
+    {
+       Bowl,
+       OatsRaw;10,
+
+       Result:Oatmeal,
+       Time:20.0,
+       Category:Cooking,
+       OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Prepare Cereals Bowl
+    {
+       Bowl,
+       Cereal;5,
+       Milk;2,
+
+       Result:CerealBowl,
+       Time:20.0,
+       Category:Cooking,
+       OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Place Pie in Baking Pan
+    {
+       PieDough,
+       BakingPan,
+       keep RollingPin,
+
+       Result:PiePrep,
+       Time:30.0,
+       Category:Cooking,
+       OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Pie
+    {
+        keep KitchenKnife/HuntingKnife,
+        PieWholeRaw,
+
+        Result:Pie=5,
+        Time:20.0,
+        OnCreate:SlicePie_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Cake
+    {
+        keep KitchenKnife/HuntingKnife,
+        CakeRaw,
+
+        Result:CakeSlice=5,
+        Time:20.0,
+        OnCreate:SlicePie_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Fillet
+    {
+        keep KitchenKnife/HuntingKnife,
+        Bass/Catfish/Perch/Crappie/Panfish/Pike/Trout,
+
+        Result:FishFillet=2,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnTest:CutFish_TestIsValid,
+        OnCreate:CutFish_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Slice Ham
+    {
+        keep KitchenKnife/HuntingKnife,
+        Ham,
+
+        Result:HamSlice=6,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Frog
+    {
+        keep KitchenKnife/HuntingKnife,
+        Frog,
+
+        Result:FrogMeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Make Fishing Rod
+    {
+        keep KitchenKnife/HuntingKnife,
+        WoodenStick,
+        Twine=2,
+        Paperclip/Nails,
+
+        Result:CraftedFishingRodTwineLine,
+        Time:80.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Fishing Rod
+    {
+        keep KitchenKnife/HuntingKnife,
+        WoodenStick,
+        FishingLine=2,
+        Paperclip/Nails,
+
+        Result:CraftedFishingRod,
+        Time:80.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Fix Fishing Rod
+    {
+        FishingRodBreak,
+        Twine=2,
+        Paperclip/Nails,
+
+        Result:FishingRodTwineLine,
+        Time:80.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Fix Fishing Rod
+    {
+        FishingRodBreak,
+        FishingLine=2,
+        Paperclip/Nails,
+
+        Result:FishingRod,
+        Time:80.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Plantain Poultice
+    {
+        keep MortarPestle,
+        Plantain=5,
+
+        Result:PlantainCataplasm,
+        Time:60.0,
+        Category:Health,
+    }
+
+    recipe Make Comfrey Poultice
+    {
+        keep MortarPestle,
+        Comfrey=5,
+
+        Result:ComfreyCataplasm,
+        Time:60.0,
+        Category:Health,
+    }
+
+    recipe Make Wild Garlic Poultice
+    {
+        keep MortarPestle,
+        WildGarlic=5,
+
+        Result:WildGarlicCataplasm,
+        Time:60.0,
+        Category:Health,
+    }
+
+    recipe Make Hot Cuppa
+    {
+        FullKettle=2,
+        destroy Teabag2,
+        destroy Mugl,
+        Sugar=1,
+
+
+        Result:Mugfulll,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+
+    }
+
+    recipe Make Hot Cuppa
+    {
+        FullKettle=2,
+        destroy Coffee2,
+        destroy Mugl,
+        Sugar=1,
+
+
+        Result:Mugfulll,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:-0.22,
+        Category:Cooking,
+
+    }
+
+    recipe Make Cold Cuppa
+    {
+        FullKettle=2,
+        destroy Teabag2,
+        destroy Mugl,
+        Sugar=1,
+
+
+        Result:ColdCuppa,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:1,
+        Category:Cooking,
+    }
+
+    recipe Make Cold Cuppa
+    {
+        FullKettle=2,
+        destroy Coffee2,
+        destroy Mugl,
+        Sugar=1,
+
+
+        Result:ColdCuppa,
+        Time:30.0,
+        CanBeDoneFromFloor:true,
+        Heat:1,
+        Category:Cooking,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy RippedSheets,
+        WhiskeyFull;10,
+
+        Result:AlcoholRippedSheets,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy Bandage,
+        WhiskeyFull;10,
+
+        Result:AlcoholBandage,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy Bandage,
+        WaterPot;5,
+        CanBeDoneFromFloor:true,
+        Result:AlcoholBandage,
+        Time:100.0,
+        Heat:-0.22,
+        Category:Health,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy RippedSheets,
+        WaterPot;5,
+        CanBeDoneFromFloor:true,
+        Result:AlcoholRippedSheets,
+        Time:100.0,
+        Heat:-0.22,
+        Category:Health,
+    }
+
+    recipe Clean Bandage
+    {
+        BandageDirty,
+        Water,
+
+        Result:Bandage,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy Bandage,
+        Disinfectant=3,
+
+        Result:AlcoholBandage,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Disinfect Rag
+    {
+        RippedSheets,
+        Disinfectant=3,
+
+        Result:AlcoholRippedSheets,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Clean Rag
+    {
+        RippedSheetsDirty,
+        Water,
+
+        Result:RippedSheets,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Drill Plank
+    {
+        Plank/Log,
+        keep Screwdriver/KitchenKnife/ButterKnife/HuntingKnife/SharpedStone,
+
+        Result:PercedWood,
+        Time:40.0,
+    }
+
+    recipe Make Stone Axe
+    {
+        TreeBranch,
+        SharpedStone,
+        RippedSheets/Twine/RippedSheetsDirty,
+
+        Result:AxeStone,
+        Time:80.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Stone Hammer
+    {
+        TreeBranch,
+        Stone,
+        RippedSheets/Twine/RippedSheetsDirty,
+
+        Result:HammerStone,
+        Time:80.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Wooden Spear
+    {
+        TreeBranch,
+        keep KitchenKnife/HuntingKnife/SharpedStone,
+
+        Result:WoodenLance,
+        Time:80.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Sturdy Stick
+    {
+        Plank,
+        keep Saw,
+
+        Result:WoodenStick=8,
+        Sound:PZ_Saw,
+        Time:50.0,
+    }
+
+    recipe Make Fishing Net
+    {
+        Twine=10,
+        Wire=5,
+
+        Result:FishingNet,
+        Time:150.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Get Wire Back
+    {
+        BrokenFishingNet,
+
+        Result:Wire;3,
+        Time:100.0,
+        Category:Fishing,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Splint
+    {
+        RippedSheets/RippedSheetsDirty,
+        Plank/TreeBranch/WoodenStick,
+
+        Result:Splint,
+        Time:70.0,
+        Category:Health,
+    }
+
+    recipe Butcher Small Animal
+    {
+        keep KitchenKnife/HuntingKnife,
+        DeadMouse/DeadSquirrel/DeadRat,
+
+        Result:Smallanimalmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:CutAnimal_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Butcher Rabbit
+    {
+        keep KitchenKnife/HuntingKnife,
+        DeadRabbit,
+
+        Result:Rabbitmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:CutAnimal_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Butcher Bird
+    {
+        keep KitchenKnife/HuntingKnife,
+        DeadBird,
+
+        Result:Smallbirdmeat,
+        Sound:PZ_FoodSwoosh,
+        Time:50.0,
+        OnCreate:CutAnimal_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Make Wooden Cage Trap
+    {
+        keep Saw,
+        Plank=3,
+        Nails=5,
+
+        Result:TrapCrate,
+        Sound:PZ_Saw,
+        Time:120.0,
+        Category:Trapper,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Stick Trap
+    {
+        WoodenStick=4,
+        Twine=1,
+
+        Result:TrapStick,
+        Time:120.0,
+        Category:Trapper,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Snare Trap
+    {
+        keep Saw,
+        Plank=1,
+        Twine=2,
+
+        SkillRequired:Trapping=1,
+        Result:TrapSnare,
+        Sound:PZ_Saw,
+        Time:130.0,
+        Category:Trapper,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Trap Box
+    {
+        keep Saw,
+        Plank=4,
+        Nails=7,
+
+        SkillRequired:Woodwork=1;Trapping=2;,
+        Result:TrapBox,
+        Sound:PZ_Saw,
+        Time:150.0,
+        Category:Trapper,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Cage Trap
+    {
+        Wire=5,
+
+        SkillRequired:Trapping=3;,
+        Result:TrapCage,
+        Time:180.0,
+        Category:Trapper,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Mattress
+    {
+        keep Needle,
+        Thread=5,
+        Sheet=5,
+        Pillow=5,
+
+        Result:Mattress,
+        Time:180.0,
+    }
+
+    recipe Make Mattress
+    {
+        keep SutureNeedle,
+        Thread=5,
+        Sheet=5,
+        Pillow=5,
+
+        Result:Mattress,
+        Time:180.0,
+    }
+
+    recipe Douse Cotton in Alcohol
+    {
+        Disinfectant=1,
+        destroy CottonBalls,
+
+        Result:AlcoholedCottonBalls,
+        Time:20,
+        Category:Health,
+    }
+
+    recipe Put Alcohol on Cotton
+    {
+        destroy CottonBalls,
+        WhiskeyFull;10,
+
+        Result:AlcoholedCottonBalls,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Make Jar of Tomatoes
+    {
+        EmptyJar,
+        JarLid,
+        farming.Tomato=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedTomato,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Tomatoes
+    {
+        CannedTomato,
+
+        Result:farming.Tomato=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Carrots
+    {
+        EmptyJar,
+        JarLid,
+        Carrots=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedCarrots,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Carrots
+    {
+        CannedCarrots,
+
+        Result:Carrots=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Potatoes
+    {
+        EmptyJar,
+        JarLid,
+        farming.Potato=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedPotato,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Potatoes
+    {
+        CannedPotato,
+
+        Result:farming.Potato=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Eggplants
+    {
+        EmptyJar,
+        JarLid,
+        Eggplant=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedEggplant,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Eggplants
+    {
+        CannedEggplant,
+
+        Result:Eggplant=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Leeks
+    {
+        EmptyJar,
+        JarLid,
+        Leek=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedLeek,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Leeks
+    {
+        CannedLeek,
+
+        Result:Leek=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Red Radishes
+    {
+        EmptyJar,
+        JarLid,
+        farming.RedRadish=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedRedRadish,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Red Radishes
+    {
+        CannedRedRadish,
+
+        Result:farming.RedRadish=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Bell Peppers
+    {
+        EmptyJar,
+        JarLid,
+        BellPepper=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedBellPepper,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Bell Peppers
+    {
+        CannedBellPepper,
+
+        Result:BellPepper=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Cabbage
+    {
+        EmptyJar,
+        JarLid,
+        farming.Cabbage=3,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedCabbage,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Cabbage
+    {
+        CannedCabbage,
+
+        Result:farming.Cabbage=3,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Jar of Broccoli
+    {
+        EmptyJar,
+        JarLid,
+        Broccoli=5,
+        Water=10,
+        Vinegar=2,
+        Sugar=1,
+
+        Result:CannedBroccoli,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Broccoli
+    {
+        CannedBroccoli,
+
+        Result:Broccoli=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Two-Log Stack
+    {
+        Log=2,
+        Rope=2,
+
+        Result:LogStacks2,
+        Time:60.0,
+        Category:Carpentry,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Three-Log Stack
+    {
+        Log=3,
+        Rope=3,
+
+        Result:LogStacks3,
+        Time:60.0,
+        Category:Carpentry,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Make Four-Log Stack
+    {
+        Log=4,
+        Rope=4,
+
+        Result:LogStacks4,
+        Time:60.0,
+        Category:Carpentry,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Unstack Logs
+    {
+        LogStacks2,
+
+        Result:Log=2,
+        Time:60.0,
+        OnCreate:Split2LogsStack_OnCreate,
+        Category:Carpentry,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Unstack Logs
+    {
+        LogStacks3,
+
+        Result:Log=3,
+        Time:60.0,
+        OnCreate:Split3LogsStack_OnCreate,
+        Category:Carpentry,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Unstack Logs
+    {
+        LogStacks4,
+
+        Result:Log=4,
+        Time:60.0,
+        OnCreate:Split4LogsStack_OnCreate,
+        Category:Carpentry,
+        OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Corned Beef
+    {
+       CannedCornedBeef,
+
+       Result:CannedCornedBeefOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Corn
+    {
+       CannedCorn,
+       keep TinOpener,
+
+       Result:CannedCornOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Bolognese
+    {
+       CannedBolognese,
+       keep TinOpener,
+
+       Result:CannedBologneseOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Chili
+    {
+       CannedChili,
+       keep TinOpener,
+
+       Result:CannedChiliOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Mushroom Soup
+    {
+       CannedMushroomSoup,
+       keep TinOpener,
+
+       Result:CannedMushroomSoupOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Peas
+    {
+       CannedPeas,
+       keep TinOpener,
+
+       Result:CannedPeasOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Potato
+    {
+       CannedPotato2,
+       keep TinOpener,
+
+       Result:CannedPotatoOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Sardines
+    {
+       CannedSardines,
+
+       Result:CannedSardinesOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Tomato
+    {
+       CannedTomato2,
+       keep TinOpener,
+
+       Result:CannedTomatoOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    recipe Open Canned Carrots
+    {
+       CannedCarrots2,
+       keep TinOpener,
+
+       Result:CannedCarrotsOpen,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:NoXP_OnGiveXP,
+    }
+
+    /************************ Dismantle stuff ************************/
+
+    recipe Dismantle TV Remote
+    {
+       Remote,
+       keep Screwdriver,
+
+       Result:Receiver,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+       OnCreate:Dismantle_OnCreate,
+    }
+
+    recipe Dismantle Video Game
+    {
+       VideoGame,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle Cordless Phone
+    {
+       CordlessPhone,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle Speaker
+    {
+       Speaker,
+       keep Screwdriver,
+
+       Result:Amplifier,
+       Time:30.0,
+       OnCreate:Dismantle_OnCreate,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle Home Alarm
+    {
+       HomeAlarm,
+       keep Screwdriver,
+
+       Result:MotionSensor,
+       Time:30.0,
+       OnCreate:Dismantle_OnCreate,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle Digital Watch
+    {
+       DigitalWatch2,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle Earbuds
+    {
+       Earbuds,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle Headphones
+    {
+       Headphones,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle CD Player
+    {
+       CDplayer,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap=2,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Gather Gunpowder
+    {
+       Bullets9mm/ShotgunShells/223Bullets/308Bullets,
+
+       Result:GunPowder,
+       Time:30.0,
+    }
+
+
+    /************************ Traps ************************/
+
+    recipe Make Remote Controller V1
+    {
+       Remote,
+       keep Screwdriver,
+       ElectronicsScrap=2,
+       Glue=2,
+
+       Result:RemoteCraftedV1,
+       SkillRequired:Electricity=2,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Electrical,
+    }
+
+    recipe Make Remote Controller V2
+    {
+       Remote,
+       keep Screwdriver,
+       ElectronicsScrap=3,
+       Glue=2,
+
+       Result:RemoteCraftedV2,
+       SkillRequired:Electricity=4,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Electrical,
+    }
+
+    recipe Make Remote Controller V3
+    {
+       Remote,
+       keep Screwdriver,
+       ElectronicsScrap=4,
+       Glue=2,
+
+       Result:RemoteCraftedV3,
+       SkillRequired:Electricity=6,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Electrical,
+    }
+
+    recipe Make Remote Trigger
+    {
+       Receiver/Radio.RadioReceiver,
+       keep Screwdriver,
+       ElectronicsScrap=2,
+       Glue=2,
+
+       Result:TriggerCrafted,
+       SkillRequired:Electricity=2,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Electrical,
+    }
+
+    recipe Make Timer
+    {
+       Timer/AlarmClock2,
+       keep Screwdriver,
+       ElectronicsScrap,
+       Glue=1,
+
+       Result:TimerCrafted,
+       SkillRequired:Electricity=1,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Electrical,
+    }
+
+    recipe Add Timer
+    {
+       Aerosolbomb,
+       TimerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:AerosolbombTriggered,
+       NeedToBeLearn:true,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V1
+    {
+       Aerosolbomb,
+       MotionSensor,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:AerosolbombSensorV1,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V2
+    {
+       Aerosolbomb,
+       MotionSensor,
+       ElectronicsScrap=3,
+       DuctTape=1,
+
+       Result:AerosolbombSensorV2,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=4,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V3
+    {
+       Aerosolbomb,
+       MotionSensor,
+       ElectronicsScrap=4,
+       DuctTape=1,
+
+       Result:AerosolbombSensorV3,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=6,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Crafted Trigger
+    {
+       Aerosolbomb,
+       TriggerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:AerosolbombRemote,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Timer
+    {
+       FlameTrap,
+       TimerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:FlameTrapTriggered,
+       NeedToBeLearn:true,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V1
+    {
+       FlameTrap,
+       MotionSensor,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:FlameTrapSensorV1,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V2
+    {
+       FlameTrap,
+       MotionSensor,
+       ElectronicsScrap=3,
+       DuctTape=1,
+
+       Result:FlameTrapSensorV2,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=4,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V3
+    {
+       FlameTrap,
+       MotionSensor,
+       ElectronicsScrap=4,
+       DuctTape=1,
+
+       Result:FlameTrapSensorV3,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=6,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Crafted Trigger
+    {
+       FlameTrap,
+       TriggerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:FlameTrapRemote,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Timer
+    {
+       NoiseTrap,
+       TimerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:NoiseTrapTriggered,
+       NeedToBeLearn:true,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V1
+    {
+       NoiseTrap,
+       MotionSensor,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:NoiseTrapSensorV1,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V2
+    {
+       NoiseTrap,
+       MotionSensor,
+       ElectronicsScrap=3,
+       DuctTape=1,
+
+       Result:NoiseTrapSensorV2,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=4,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V3
+    {
+       NoiseTrap,
+       MotionSensor,
+       ElectronicsScrap=4,
+       DuctTape=1,
+
+       Result:NoiseTrapSensorV3,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=6,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Crafted Trigger
+    {
+       NoiseTrap,
+       TriggerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:NoiseTrapRemote,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Timer
+    {
+       SmokeBomb,
+       TimerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:SmokeBombTriggered,
+       NeedToBeLearn:true,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V1
+    {
+       SmokeBomb,
+       MotionSensor,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:SmokeBombSensorV1,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V2
+    {
+       SmokeBomb,
+       MotionSensor,
+       ElectronicsScrap=3,
+       DuctTape=1,
+
+       Result:SmokeBombSensorV2,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=4,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V3
+    {
+       SmokeBomb,
+       MotionSensor,
+       ElectronicsScrap=4,
+       DuctTape=1,
+
+       Result:SmokeBombSensorV3,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=6,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Crafted Trigger
+    {
+       SmokeBomb,
+       TriggerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:SmokeBombRemote,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Timer
+    {
+       PipeBomb,
+       TimerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:PipeBombTriggered,
+       NeedToBeLearn:true,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V1
+    {
+       PipeBomb,
+       MotionSensor,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:PipeBombSensorV1,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V2
+    {
+       PipeBomb,
+       MotionSensor,
+       ElectronicsScrap=3,
+       DuctTape=1,
+
+       Result:PipeBombSensorV2,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=4,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Motion Sensor V3
+    {
+       PipeBomb,
+       MotionSensor,
+       ElectronicsScrap=4,
+       DuctTape=1,
+
+       Result:PipeBombSensorV3,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=6,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Add Crafted Trigger
+    {
+       PipeBomb,
+       TriggerCrafted,
+       ElectronicsScrap=2,
+       DuctTape=1,
+
+       Result:PipeBombRemote,
+       NeedToBeLearn:true,
+       SkillRequired:Electricity=2,
+       Time:80.0,
+       Category:Electrical,
+    }
+
+    recipe Make Molotov Cocktail
+    {
+       WhiskeyFull,
+       RippedSheets/RippedSheetsDirty,
+
+       Result:Molotov,
+       Time:50.0,
+    }
+
+    recipe Make Molotov Cocktail
+    {
+       WineEmpty/WineEmpty2/WhiskeyEmpty,
+       RippedSheets/RippedSheetsDirty,
+       PetrolCan=1,
+
+       Result:Molotov,
+       Time:50.0,
+    }
+
+    recipe Make Aerosol bomb
+    {
+       Hairspray,
+       Sparklers,
+       Aluminum,
+
+       Result:Aerosolbomb,
+       Time:80.0,
+       NeedToBeLearn:true,
+       Category:Engineer,
+    }
+
+    recipe Make Flame bomb
+    {
+       PetrolCan=4,
+       RippedSheets/RippedSheetsDirty,
+       WaterBottleEmpty,
+
+       Result:FlameTrap,
+       Time:80.0,
+       NeedToBeLearn:true,
+       Category:Engineer,
+    }
+
+    recipe Make Smoke Bomb
+    {
+       Coldpack,
+       RippedSheets/RippedSheetsDirty,
+       Newspaper=2,
+
+       Result:SmokeBomb,
+       Time:80.0,
+       NeedToBeLearn:true,
+       Category:Engineer,
+    }
+
+    recipe Make Noise Maker
+    {
+       ElectronicsScrap=7,
+       Amplifier,
+
+       Result:NoiseTrap,
+       SkillRequired:Electricity=3,
+       Time:80.0,
+       NeedToBeLearn:true,
+       Category:Electrical,
+    }
+
+    recipe Make Pipe bomb
+    {
+       ElectronicsScrap=3,
+       Pipe,
+       GunPowder=20,
+       Twine=1,
+       keep Saw,
+
+       Result:PipeBomb,
+       Time:100.0,
+       NeedToBeLearn:true,
+       Category:Engineer,
+    }
+
+    /************************ Metal Working ************************/
+
+    recipe Make Fork
+    {
+       IronIngot=18,
+       keep Hammer/BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:Fork,
+       Time:100.0,
+       Category:Smithing,
+       OnGiveXP:Give10BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Spoon
+    {
+       IronIngot=18,
+       keep Hammer/BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:Spoon,
+       Time:100.0,
+       Category:Smithing,
+       OnGiveXP:Give10BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Cooking Pot
+    {
+       IronIngot=55,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Pot,
+       Time:190.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=2,
+       OnGiveXP:Give20BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Roasting Pan
+    {
+       IronIngot=80,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Pot,
+       Time:220.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=2,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Saucepan
+    {
+       IronIngot=45,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Saucepan,
+       Time:170.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=2,
+       OnGiveXP:Give20BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Baking Tray
+    {
+       IronIngot=85,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:BakingTray,
+       Time:220.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=2,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Baking Pan
+    {
+       IronIngot=85,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:BakingPan,
+       Time:220.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=2,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Pan
+    {
+       IronIngot=30,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Pan,
+       Time:220.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=2,
+       OnGiveXP:Give20BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Letter Opener
+    {
+       IronIngot=23,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:LetterOpener,
+       Time:120.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give15BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+
+    recipe Make Nails
+    {
+       IronIngot=20,
+       keep Hammer/BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:Nails=2,
+       Time:120.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give10BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Paperclips
+    {
+       IronIngot=20,
+       keep Hammer/BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:Paperclip=10,
+       Time:120.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give10BSXP,
+       NeedToBeLearn:true,
+    }
+
+
+    recipe Make Scissors
+    {
+       IronIngot=12,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Scissors,
+       Time:120.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give15BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Door Knob
+    {
+       IronIngot=15,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Doorknob,
+       Time:150.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Hinge
+    {
+       IronIngot=15,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Hinge,
+       Time:150.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Butter Knife
+    {
+       IronIngot=14,
+       keep Hammer/BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:ButterKnife,
+       Time:180.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=3,
+       OnGiveXP:Give15BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Ball Peen Hammer
+    {
+       IronIngot=40,
+       keep Hammer/BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:BallPeenHammer,
+       Time:170.0,
+       SkillRequired:Blacksmith=4,
+       Category:Smithing,
+       OnGiveXP:Give20BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Tongs
+    {
+       IronIngot=30,
+       keep Hammer/BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:Tongs,
+       Time:170.0,
+       SkillRequired:Blacksmith=4,
+       Category:Smithing,
+       OnGiveXP:Give20BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Hammer
+    {
+       IronIngot=40,
+       keep BallPeenHammer,
+
+       NearItem:Anvil,
+       Result:Hammer,
+       Time:170.0,
+       SkillRequired:Blacksmith=4,
+       Category:Smithing,
+       OnGiveXP:Give20BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Sheet Metal
+    {
+       IronIngot=110,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:SheetMetal,
+       Time:190.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=4,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Suture Needle Holder
+    {
+       IronIngot=13,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:SutureNeedleHolder,
+       Time:150.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=5,
+       OnGiveXP:Give20BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Tweezers
+    {
+       IronIngot=3,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Tweezers,
+       Time:120.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=5,
+       OnGiveXP:Give10BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Suture Needle
+    {
+       IronIngot=9,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:SutureNeedle,
+       Time:150.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=6,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Metal Drum
+    {
+       IronIngot=100,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:MetalDrum,
+       Time:250.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=6,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+   recipe Make Kitchen Knife
+   {
+      IronIngot=15,
+      Plank,
+      keep BallPeenHammer,
+      keep Tongs,
+
+      NearItem:Anvil,
+      Result:KitchenKnife,
+      Time:180.0,
+      Category:Smithing,
+      SkillRequired:Blacksmith=7,
+      OnGiveXP:Give15BSXP,
+      OnCreate:BSItem_OnCreate,
+      NeedToBeLearn:true,
+   }
+
+   recipe Make Saw
+   {
+      IronIngot=55,
+      Plank,
+      keep BallPeenHammer,
+      keep Tongs,
+
+      NearItem:Anvil,
+      Result:Saw,
+      Time:250.0,
+      Category:Smithing,
+      SkillRequired:Blacksmith=7,
+      OnGiveXP:Give25BSXP,
+      NeedToBeLearn:true,
+   }
+
+    recipe Make Hunting Knife
+    {
+       IronIngot=50,
+       Plank,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:HuntingKnife,
+       Time:180.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give20BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make 9mm Bullets Mold
+    {
+       IronIngot=30,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:9mmBulletsMold,
+       Time:200.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make 308 Bullets Mold
+    {
+       IronIngot=30,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:308BulletsMold,
+       Time:200.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make 223 Bullets Mold
+    {
+       IronIngot=30,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:223BulletsMold,
+       Time:200.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Shotgun Shells Mold
+    {
+       IronIngot=30,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:ShotgunShellsMold,
+       Time:200.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give25BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make 9mm Bullets
+    {
+       IronIngot=22,
+       GunPowder=2,
+       keep 9mmBulletsMold,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Bullets9mm=2,
+       Time:180.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Shotgun Shells
+    {
+       IronIngot=25,
+       GunPowder=3,
+       keep ShotgunShellsMold,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:ShotgunShells=2,
+       Time:180.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make 308 Bullets
+    {
+       IronIngot=23,
+       GunPowder=2,
+       keep 308BulletsMold,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:308Bullets=2,
+       Time:180.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make 223 Bullets
+    {
+       IronIngot=23,
+       GunPowder=2,
+       keep 223BulletsMold,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:223Bullets=2,
+       Time:180.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=8,
+       OnGiveXP:Give15BSXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Crowbar
+    {
+       MetalBar,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Crowbar,
+       Time:300.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=9,
+       OnGiveXP:Give25BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Golfclub
+    {
+       MetalBar,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Golfclub,
+       Time:250.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=9,
+       OnGiveXP:Give25BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Axe
+    {
+       IronIngot=170,
+       Handle,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Axe,
+       Time:300.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=10,
+       OnGiveXP:Give25BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Sledgehammer
+    {
+       IronIngot=170,
+       Handle,
+       keep BallPeenHammer,
+       keep Tongs,
+
+       NearItem:Anvil,
+       Result:Sledgehammer,
+       Time:300.0,
+       Category:Smithing,
+       SkillRequired:Blacksmith=10,
+       OnGiveXP:Give25BSXP,
+       OnCreate:BSItem_OnCreate,
+       NeedToBeLearn:true,
+    }
+
+    /************************ Metal Welding ************************/
+
+    recipe Make Metal Pipe
+    {
+       IronIngot=40,
+       BlowTorch=5,
+       keep WeldingMask,
+
+       Result:MetalPipe,
+       Time:150.0,
+       Category:Welding,
+       OnGiveXP:Give10MWXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Metal Bar
+    {
+       MetalPipe,
+       IronIngot=10,
+       BlowTorch=6,
+       keep WeldingMask,
+
+       Result:MetalBar,
+       Time:150.0,
+       Category:Welding,
+       SkillRequired:MetalWelding=2,
+       OnGiveXP:Give10MWXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Metal Sheet
+    {
+       SmallSheetMetal=4,
+       BlowTorch=7,
+       keep WeldingMask,
+
+       Result:SheetMetal,
+       Time:250.0,
+       Category:Welding,
+       SkillRequired:MetalWelding=4,
+       OnGiveXP:Give25MWXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Make Small Metal Sheet
+    {
+       SheetMetal,
+       BlowTorch=7,
+       keep WeldingMask,
+
+       Result:SmallSheetMetal=3,
+       Time:250.0,
+       Category:Welding,
+       SkillRequired:MetalWelding=4,
+       OnGiveXP:Give25MWXP,
+       NeedToBeLearn:true,
+    }
+
+    recipe Refill Blow Torch
+    {
+       BlowTorch,
+       PropaneTank,
+
+       Result:BlowTorch,
+       Time:50.0,
+       Category:Welding,
+       OnTest:RefillBlowTorch_OnTest,
+       OnCreate:RefillBlowTorch_OnCreate,
+    }
+
+    recipe Wash Clothing
+    {
+       keep Vest/Shirt/Trousers/Skirt/Blouse/Underwear1/Underwear2/Shoes,
+       Soap2=1,
+       Water=3,
+
+       Result:Vest,
+       OnTest:WashClothing_TestIsValid,
+       Time:100.0,
+       OnCreate:WashClothing_OnCreate,
+       RemoveResultItem:true,
+    }
+}

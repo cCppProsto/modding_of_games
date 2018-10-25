@@ -1,0 +1,6609 @@
+module Base
+{
+	
+
+/************************Weapon************************/
+
+    item AxeStone
+    {
+        MaxRange	=	1.3,
+		MinAngle	=	0.2,
+		WeaponSprite	=	Fireaxe,
+		Type	=	Weapon,
+		MinimumSwingTime	=	3.0,
+		KnockBackOnNoDeath	=	TRUE,
+		SwingAmountBeforeImpact	=	0.002,
+		Categories	=	Axe,
+		ConditionLowerChanceOneIn	=	5,
+		Weight	=	2,
+		SplatNumber	=	1,
+		PushBackMod	=	0.3,
+		MaxDamage	=	1.5,
+		SubCategory	=	Swinging,
+		ConditionMax	=	5,
+		MaxHitCount	=	2,
+		DoorDamage	=	10,
+		IdleAnim	=	Idle_Weapon2,
+		SwingAnim	=	Bat,
+		CriticalChance	=	20,
+		WeaponWeight	=	2,
+		DisplayName	=	Raw Axe,
+		MinRange	=	0.61,
+		SwingTime	=	3.0,
+		HitAngleMod	=	-30,
+		MinDamage	=	0.5,
+		SplatSize	=	5,
+		KnockdownMod	=	1.5,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	AxeStone,
+		RunAnim	=	Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   10,
+    }
+
+    item HuntingKnife
+	{
+		MaxRange	=	0.9,
+		WeaponSprite	=	Knife,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blade,
+		ConditionLowerChanceOneIn	=	20,
+		Weight	=	0.3,
+		SplatNumber	=	0,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.6,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		WeaponWeight	=	1.7,
+		DisplayName	=	Hunting Knife,
+		MinRange	=	0.61,
+		CloseKillMove = Jaw_Stab,
+		SwingTime	=	2,
+		MinDamage	=	0.3,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	HuntingKnife,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   2,
+        EnduranceMod = 0.5,
+        BreakSound  =   PZ_MetalSnap,
+        MetalValue = 30,
+	}
+
+    item IcePick
+	{
+		MaxRange	=	0.9,
+		WeaponSprite	=	Knife,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blade,
+		ConditionLowerChanceOneIn	=	7,
+		Weight	=	0.3,
+		SplatNumber	=	0,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.4,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		WeaponWeight	=	1.7,
+		DisplayName	=	Ice Pick,
+		MinRange	=	0.61,
+		CloseKillMove = Jaw_Stab,
+		SwingTime	=	2,
+		MinDamage	=	0.2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	IcePick,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   2,
+        BreakSound  =   PZ_MetalSnap,
+        EnduranceMod = 0.5,
+	}
+
+    item LetterOpener
+	{
+		MaxRange	=	0.9,
+		WeaponSprite	=	Knife,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blade,
+		ConditionLowerChanceOneIn	=	1,
+		Weight	=	0.3,
+		SplatNumber	=	0,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.4,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	5,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		WeaponWeight	=	1.7,
+		DisplayName	=	Letter Opener,
+		MinRange	=	0.61,
+		CloseKillMove = Jaw_Stab,
+		SwingTime	=	2,
+		MinDamage	=	0.2,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	TRUE,
+		Icon	=	LetterOpener,
+		RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   2,
+        EnduranceMod = 0.5,
+        BreakSound  =   PZ_MetalSnap,
+        MetalValue = 15,
+	}
+
+	item Crowbar
+	{
+		MaxRange	=	1.2,
+		WeaponSprite	=	Baseballbat,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	3,
+		KnockBackOnNoDeath = TRUE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blunt,
+		Weight	=	3,
+		ConditionLowerChanceOneIn	=	70,
+		PushBackMod	=	0.5,
+		MinDamage	=	0.6,
+		MaxDamage	=	1.1,
+		SubCategory	=	Swinging,
+		ConditionMax	=	15,
+		MaxHitCount	=	1,
+		DoorDamage	=	8,
+		IdleAnim	=	Idle_Weapon2,
+		SwingAnim	=	Bat,
+		CriticalChance	=	10,
+		WeaponWeight	=	4,
+		DisplayName	=	Crowbar,
+		MinRange	=	0.61,
+		SwingTime	=	3,
+		HitAngleMod	=	-30,
+		KnockdownMod	=	0,
+		Icon	=	Crowbar,
+		RunAnim	=	Run_Weapon2,
+		BreakSound  =   PZ_MetalSnap,
+		TreeDamage  =   1,
+		MetalValue = 150,
+	}
+
+	item Fork
+	{
+		MaxRange	=	0.9,
+		WeaponSprite	=	Knife,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blade,
+		Weight	=	0.3,
+		ConditionLowerChanceOneIn	=	1,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.1,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	3,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		CriticalChance	=	5,
+		WeaponWeight	=	0.3,
+		DisplayName	=	Fork,
+		MinRange	=	0.2,
+		SwingTime	=	2,
+		MinDamage	=	0.1,
+		KnockdownMod	=	0,
+		Icon	=	Fork,
+		TreeDamage  =   0,
+		EnduranceMod = 0.5,
+		MetalValue = 5,
+	}
+
+	item Golfclub
+	{
+		MaxRange	=	1.5,
+		WeaponSprite	=	GolfClub,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	3,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blunt,
+		Weight	=	2,
+		ConditionLowerChanceOneIn	=	15,
+		PushBackMod	=	0.6,
+		MinDamage	=	0.3,
+		MaxDamage	=	0.7,
+		SubCategory	=	Swinging,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		DoorDamage	=	5,
+		IdleAnim	=	Idle_Weapon2,
+		SwingAnim	=	Bat,
+		CriticalChance	=	10,
+		WeaponWeight	=	4,
+		DisplayName	=	Golfclub,
+		MinRange	=	0.61,
+		SwingTime	=	3,
+		HitAngleMod	=	-30,
+		KnockdownMod	=	0,
+		Icon	=	Golfclub,
+		RunAnim	=	Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        TreeDamage  =   0,
+        EnduranceMod = 0.6,
+        MetalValue = 90,
+	}
+
+	item HockeyStick
+	{
+		MaxRange	=	1.6,
+		WeaponSprite	=	HockeyStick,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	3,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blunt,
+		Weight	=	2,
+		ConditionLowerChanceOneIn	=	5,
+		PushBackMod	=	0.6,
+		MinDamage	=	0.3,
+		MaxDamage	=	0.7,
+		SubCategory	=	Swinging,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		DoorDamage	=	5,
+		IdleAnim	=	Idle_Weapon2,
+		SwingAnim	=	Bat,
+		CriticalChance	=	10,
+		WeaponWeight	=	4,
+		DisplayName	=	Hockey Stick,
+		MinRange	=	0.61,
+		SwingTime	=	3,
+		HitAngleMod	=	-30,
+		KnockdownMod	=	0,
+		Icon	=	HockeyStick,
+		RunAnim	=	Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        TreeDamage  =   0,
+        EnduranceMod = 0.6,
+    }
+
+	item RollingPin
+	{
+		MaxRange	=	1,
+		WeaponSprite	=	Baseballbat,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	3,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blunt,
+		Weight	=	1.5,
+		ConditionLowerChanceOneIn	=	14,
+		PushBackMod	=	0.5,
+		MaxDamage	=	0.6,
+		MinDamage	=	0.4,
+		SubCategory	=	Swinging,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		DoorDamage	=	5,
+		IdleAnim	=	Idle_Weapon2,
+		SwingAnim	=	Bat,
+		CriticalChance	=	10,
+		WeaponWeight	=	1.5,
+		DisplayName	=	Rolling Pin,
+		MinRange	=	0.61,
+		SwingTime	=	3,
+		HitAngleMod	=	-30,
+		KnockdownMod	=	0,
+		Icon	=	RollingPin,
+		RunAnim	=	Run_Weapon2,
+		TreeDamage  =   0,
+		EnduranceMod = 1.4,
+	}
+
+	item Scissors
+	{
+		MaxRange	=	0.9,
+		WeaponSprite	=	Knife,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blade,
+		Weight	=	0.4,
+		ConditionLowerChanceOneIn	=	1,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	10,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		CriticalChance	=	5,
+		WeaponWeight	=	0.4,
+		DisplayName	=	Scissors,
+		MinRange	=	0.61,
+		SwingTime	=	2,
+		MinDamage	=	0.2,
+		KnockdownMod	=	0,
+		Icon	=	Scissors,
+		TreeDamage  =   0,
+		EnduranceMod = 0.5,
+		MetalValue = 8,
+	}
+
+	item Spoon
+	{
+		MaxRange	=	0.9,
+		WeaponSprite	=	Knife,
+		MinAngle	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Blade,
+		Weight	=	0.3,
+		ConditionLowerChanceOneIn	=	1,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.1,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	3,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		CriticalChance	=	5,
+		WeaponWeight	=	0.3,
+		DisplayName	=	Spoon,
+		MinRange	=	0.2,
+		SwingTime	=	2,
+		MinDamage	=	0.1,
+		KnockdownMod	=	0,
+		Icon	=	Spoon,
+		TreeDamage  =   0,
+		EnduranceMod = 0.5,
+		MetalValue = 5,
+	}
+
+
+/************************Normal************************/
+
+    item Aluminum
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Aluminum,
+        Icon	=	Aluminum,
+        MetalValue = 5,
+    }
+
+    item CordlessPhone
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Cordless Phone,
+        Icon	=	CordlessPhone,
+    }
+
+    item VideoGame
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Video Game,
+        Icon	=	VideoGame,
+        MetalValue = 7,
+    }
+
+	item EmptyPetrolCan
+	{
+		Weight	=	0.3,
+		Type	=	Normal,
+		DisplayName	=	Empty Gas Can,
+		Icon	=	Petrol,
+	}
+
+    item CDplayer
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	CD Player,
+        Icon	=	CDplayer,
+        MetalValue = 7,
+    }
+
+    item Generator
+    {
+        Weight	=	40,
+        Type	=	Normal,
+        DisplayName	=	Generator,
+        Icon	=	Generator,
+        Tooltip = Tooltip_Generator,
+		RequiresEquippedBothHands = true,
+		MetalValue = 500,
+    }
+
+    item UnusableWood
+    {
+        Weight	=	1,
+        Type	=	Normal,
+        DisplayName	=	Unusable Wood,
+        Icon	=	UnsableWood,
+    }
+
+    item UnusableMetal
+    {
+        Weight	=	1,
+        Type	=	Normal,
+        DisplayName	=	Unusable Metal,
+        Icon	=	UnsableMetal,
+    }
+
+    item Coldpack
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Cold Pack,
+        Icon	=	Coldpack,
+        Tooltip = Tooltip_ItemTraps,
+    }
+
+    item ElectronicsScrap
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Electronics Scrap,
+        Icon	=	ElectronicsScrap,
+        MetalValue = 5,
+    }
+
+    item Hairspray
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Hairspray,
+        Icon	=	Hairspray,
+        Tooltip = Tooltip_ItemTraps,
+    }
+
+    item HomeAlarm
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Home Alarm,
+        Icon	=	HomeAlarm,
+    }
+
+    item MotionSensor
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Motion Sensor,
+        Icon	=	MotionSensor,
+        MetalValue = 7,
+        Tooltip = Tooltip_MotionSensor,
+    }
+
+    item Receiver
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Receiver,
+        Icon	=	Receiver,
+        MetalValue = 7,
+        Tooltip = Tooltip_Receiver,
+    }
+
+    item GunPowder
+    {
+        Weight	=	0.1,
+        Type	=	Drainable,
+        UseDelta = 0.1,
+        UseWhileEquipped = FALSE,
+        DisplayName	=	Gunpowder,
+        Icon	=	GunpowderJar,
+    }
+
+    item WaterDrop
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	WaterDrop,
+        Icon	=	WaterDrop,
+    }
+
+    item TriggerCrafted
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Crafted Trigger,
+        Icon	=	TriggerCrafted,
+        MetalValue = 7,
+    }
+
+    item Sparklers
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Box of Sparklers,
+        Icon	=	Sparklers,
+    }
+
+    item BoxOfJars
+    {
+        Weight	=	1.8,
+        Type	=	Normal,
+        DisplayName	=	Box of Jars,
+        Icon	=	JarBox,
+    }
+
+    item Speaker
+    {
+        Weight	=	1.5,
+        Type	=	Normal,
+        DisplayName	=	Speaker,
+        Icon	=	Speaker,
+        MetalValue = 20,
+        Tooltip = Tooltip_ItemTraps,
+    }
+
+    item Amplifier
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Amplifier,
+        Icon	=	Amplifier,
+        MetalValue = 8,
+    }
+
+    item Timer
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Timer,
+        Icon	=	Timer,
+        MetalValue = 7,
+    }
+
+    item TimerCrafted
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Crafted Timer,
+        Icon	=	TimerCrafted,
+        MetalValue = 10,
+        Tooltip = Tooltip_CraftedTimer,
+    }
+
+    item Baseball
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Baseball,
+        Icon	=	Baseball,
+    }
+
+    item Basketball
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Basketball,
+        Icon	=	Basketball,
+    }
+
+    item Bell
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Bell,
+        Icon	=	Bell,
+        MetalValue = 50,
+    }
+
+    item Button
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Button,
+        Icon	=	Button,
+    }
+
+    item CatToy
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Cat Toy,
+        Icon	=	CatToy,
+    }
+
+    item ChessBlack
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	ChessBlack,
+        Icon	=	ChessBlack,
+    }
+
+    item ChessWhite
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	ChessWhite,
+        Icon	=	ChessWhite,
+    }
+
+    item CleaningLiquid
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Cleaning Liquid,
+        Icon	=	CleaningLiquid,
+    }
+
+    item Cologne
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Cologne,
+        Icon	=	Cologne,
+    }
+
+    item ComicBook
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Comic Book,
+        Icon	=	ComicBook,
+        UnhappyChange	=	-20,
+        StressChange	=	-20,
+        BoredomChange	=	-30,
+    }
+
+    item FarmingMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Farming Magazine,
+        Icon	=	MagazineFish,
+        TeachedRecipes  =   Make Mildew Cure;Make Flies Cure,
+        ReplaceOnUse    =   FarmingMag1,
+    }
+
+    item FishingMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Magazine,
+        Icon	=	MagazineFish,
+        TeachedRecipes  =   Make Fishing Rod;Fix Fishing Rod,
+        ReplaceOnUse    =   FishingMag1,
+    }
+
+    item FishingMag2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Magazine,
+        Icon	=	MagazineFish2,
+        TeachedRecipes  =   Make Fishing Net;Get Wire Back,
+        ReplaceOnUse    =   FishingMag2,
+    }
+
+    item HuntingMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Hunter Magazine,
+        Icon	=	MagazineHunting,
+        TeachedRecipes  =   Make Snare Trap,
+        ReplaceOnUse    =   HuntingMag1,
+    }
+
+    item HuntingMag2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Hunter Magazine,
+        Icon	=	MagazineHunting2,
+        TeachedRecipes  =   Make Wooden Cage Trap;Make Stick Trap,
+        ReplaceOnUse    =   HuntingMag2,
+    }
+
+    item HuntingMag3
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Hunter Magazine,
+        Icon	=	MagazineHunting3,
+        TeachedRecipes  =   Make Trap Box;Make Cage Trap,
+        ReplaceOnUse    =   HuntingMag3,
+    }
+
+    item HerbalistMag
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Herbalist,
+        Icon	=	MagazineFood,
+        TeachedRecipes  =   Herbalist,
+        ReplaceOnUse    =   HerbalistMag,
+    }
+
+    item MetalworkMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Metalwork Magazine Vol.1,
+        Icon	=	MagazineWelding1,
+        TeachedRecipes  =   Make Metal Walls;Make Metal Roof,
+        ReplaceOnUse    =   MetalworkMag1,
+    }
+
+    item MetalworkMag2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Metalwork Magazine Vol.2,
+        Icon	=	MagazineWelding2,
+        TeachedRecipes  =   Make Metal Containers,
+        ReplaceOnUse    =   MetalworkMag2,
+    }
+
+    item MetalworkMag3
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Metalwork Magazine Vol.3,
+        Icon	=	MagazineWelding3,
+        TeachedRecipes  =   Make Metal Fences,
+        ReplaceOnUse    =   MetalworkMag3,
+    }
+
+    item MetalworkMag4
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Metalwork Magazine Vol.4,
+        Icon	=	MagazineWelding3,
+        TeachedRecipes  =   Make Metal Sheet;Make Small Metal Sheet,
+        ReplaceOnUse    =   MetalworkMag4,
+    }
+
+    item SmithingMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Smithing Magazine Vol.1,
+        Icon	=	MagazineBlacksmith1,
+        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
+        ReplaceOnUse    =   SmithingMag1,
+    }
+
+    item SmithingMag2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Smithing Magazine Vol.2,
+        Icon	=	MagazineBlacksmith2,
+        TeachedRecipes  =   Make Letter Opener;Make Nails;Make Paperclips;Make Scissors;Make Door Knob;Make Hinge;Make Butter Knife;Make Ball Peen Hammer,
+        ReplaceOnUse    =   SmithingMag2,
+    }
+
+    item SmithingMag3
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Smithing Magazine Vol.3,
+        Icon	=	MagazineBlacksmith3,
+        TeachedRecipes  =   Make Tongs;Make Hammer;Make Sheet Metal;Make Suture Needle Holder;Make Tweezers;Make Suture Needle;Make Metal Drum;Make Kitchen Knife;Make Saw;Make Hunting Knife;Make Shovel;Make Hand Shovel,
+        ReplaceOnUse    =   SmithingMag3,
+    }
+
+    item SmithingMag4
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Smithing Magazine Vol.4,
+        Icon	=	MagazineBlacksmith4,
+        TeachedRecipes  =   Make 9mm Bullets Mold;Make 308 Bullets Mold;Make 223 Bullets Mold;Make Shotgun Shells Mold;Make 9mm Bullets;Make Shotgun Shells;Make 308 Bullets;Make 223 Bullets;Make Crowbar;Make Golfclub;Make Axe;Make Sledgehammer,
+        ReplaceOnUse    =   SmithingMag3,
+    }
+
+    item CookingMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Good Cooking Magazine,
+        Icon	=	MagazineFood,
+        TeachedRecipes  =   Make Cake Batter;Make Pie Dough,
+        ReplaceOnUse    =   CookingMag1,
+    }
+
+    item CookingMag2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Good Cooking Magazine,
+        Icon	=	MagazineFood2,
+        TeachedRecipes  =   Make Bread Dough,
+        ReplaceOnUse    =   CookingMag2,
+    }
+
+    item ElectronicsMag1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Electronics Magazine,
+        Icon	=	MagazineElectronics01,
+        TeachedRecipes  =   Make Remote Controller V1;Make Remote Controller V2;Make Remote Controller V3,
+        ReplaceOnUse    =   ElectronicsMag1,
+    }
+
+    item ElectronicsMag2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Electronics Magazine,
+        Icon	=	MagazineElectronics03,
+        TeachedRecipes  =   Make Timer;Add Timer,
+        ReplaceOnUse    =   ElectronicsMag2,
+    }
+
+    item ElectronicsMag3
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Electronics Magazine,
+        Icon	=	MagazineElectronics04,
+        TeachedRecipes  =   Add Motion Sensor V1;Add Motion Sensor V2;Add Motion Sensor V3,
+        ReplaceOnUse    =   ElectronicsMag3,
+    }
+
+    item ElectronicsMag4
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	How to Use Generators,
+        Icon	=	MagazineElectronics02,
+        TeachedRecipes  =   Generator,
+        ReplaceOnUse    =   ElectronicsMag4,
+    }
+
+    item ElectronicsMag5
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Electronics Magazine,
+        Icon	=	MagazineElectronics03,
+        TeachedRecipes  =   Make Remote Trigger;Add Crafted Trigger,
+        ReplaceOnUse    =   ElectronicsMag5,
+    }
+
+    item EngineerMagazine1
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Engineer Magazine,
+        Icon	=	MagazineMechanics,
+        TeachedRecipes  =   Make Noise Maker,
+        ReplaceOnUse    =   EngineerMagazine1,
+    }
+
+    item EngineerMagazine2
+    {
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Engineer Magazine,
+        Icon	=	MagazineMechanics,
+        TeachedRecipes  =   Make Smoke Bomb,
+        ReplaceOnUse    =   EngineerMagazine2,
+    }
+
+    item Crayons
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Crayons,
+        Icon	=	Crayons,
+    }
+
+    item CreditCard
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	CreditCard,
+        Icon	=	CreditCard,
+    }
+
+    item Dart
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Dart,
+        Icon	=	Dart,
+        MetalValue = 3,
+    }
+
+    item DogChew
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Dog Chew Toy,
+        Icon	=	DogChew,
+    }
+
+    item Eraser
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Eraser,
+        Icon	=	Eraser,
+    }
+
+    item Football
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Football,
+        Icon	=	Football,
+    }
+
+    item GolfBall
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Golf Ball,
+        Icon	=	GolfBall,
+    }
+
+    item KnittingNeedles
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Knitting Needles,
+        Icon	=	KnittingNeedles,
+        MetalValue = 13,
+
+    }
+
+    item Leash
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Leash,
+        Icon	=	Leash,
+    }
+
+    item LightBulb
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	LightBulb,
+        Icon	=	LightBulb,
+    }
+
+    item LightBulbRed
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Red LightBulb,
+        Icon	=	LightBulb,
+        ColorRed = 255,
+        ColorGreen = 0,
+        ColorBlue = 0,
+    }
+    item LightBulbGreen
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Green LightBulb,
+        Icon	=	LightBulb,
+        ColorRed = 0,
+        ColorGreen = 255,
+        ColorBlue = 0,
+    }
+    item LightBulbBlue
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Blue LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 0,
+        ColorGreen = 0,
+        ColorBlue = 255,
+    }
+    item LightBulbYellow
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Yellow LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 255,
+        ColorGreen = 255,
+        ColorBlue = 0,
+    }
+    item LightBulbCyan
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Cyan LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 0,
+        ColorGreen = 255,
+        ColorBlue = 255,
+    }
+    item LightBulbMagenta
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Magenta LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 255,
+        ColorGreen = 0,
+        ColorBlue = 255,
+    }
+    item LightBulbOrange
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Orange LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 255,
+        ColorGreen = 128,
+        ColorBlue = 0,
+    }
+    item LightBulbPurple
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Purple LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 128,
+        ColorGreen = 0,
+        ColorBlue = 255,
+    }
+    item LightBulbPink
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	= Pink LightBulb,
+        Icon	= LightBulb,
+        ColorRed = 255,
+        ColorGreen = 20,
+        ColorBlue = 147,
+    }
+
+    item MakeupEyeshadow
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Eyes Makeup,
+        Icon	=	MakeupEyeshadow,
+    }
+
+    item MakeupFoundation
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Foundation Makeup,
+        Icon	=	MakeupFoundation,
+    }
+
+    item Mop
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Mop,
+        Icon	=	Mop,
+    }
+
+    item Perfume
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Perfume,
+        Icon	=	Perfume1,
+    }
+
+    item Pinecone
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Pine Cone,
+        Icon	=	Pinecone,
+    }
+
+    item Pipe
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Pipe,
+        Icon	=	Pipe,
+    }
+
+    item RemoteCraftedV1
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V1 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   7,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+    }
+
+    item RemoteCraftedV2
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V2 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   11,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+    }
+
+    item RemoteCraftedV3
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	V3 Remote Controller,
+        Icon	=	RemoteCrafted,
+        RemoteController    =   TRUE,
+        RemoteRange =   15,
+        MetalValue = 15,
+        Tooltip = Tooltip_RemoteController,
+    }
+
+    item RubberBand
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Rubber Band,
+        Icon	=	RubberBand,
+    }
+
+    item ScrapMetal
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Scrap Metal,
+        Icon	=	ScrapMetal,
+        MetalValue = 30,
+    }
+
+    item SheetMetal
+    {
+        Weight	=	1.5,
+        Type	=	Normal,
+        DisplayName	=	Metal Sheet,
+        Icon	=	SheetMetal,
+        MetalValue = 80,
+    }
+
+    item SoccerBall
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	SoccerBall,
+        Icon	=	SoccerBall,
+    }
+
+    item Sponge
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Sponge,
+        Icon	=	Sponge,
+    }
+
+    item TennisBall
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Tennis Ball,
+        Icon	=	TennisBall,
+    }
+
+    item ToiletPaper
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Toilet Paper,
+        Icon	=	ToiletPaper,
+    }
+
+    item ToyCar
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Toy Car,
+        Icon	=	ToyCar,
+    }
+
+    item Underwear1
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Underwear,
+        Icon	=	Underwear1,
+    }
+
+    item Underwear2
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Underwear,
+        Icon	=	Underwear2,
+    }
+
+    item WaterDish
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Water Dish,
+        Icon	=	WaterDish,
+        MetalValue = 20,
+    }
+
+    item Yarn
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Yarn,
+        Icon	=	Yarn,
+    }
+
+    item Frog
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	Frog,
+        Icon	=	Frog,
+    }
+
+    item CannedCornedBeef
+    {
+        Weight	=	0.8,
+        Type	=	Food,
+        DisplayName	=	Canned Corned Beef,
+        Icon	=	CannedCornedBeef,
+        Carbohydrates = 0,
+        Proteins = 78,
+        Lipids = 48,
+        Calories = 720,
+        Packaged = TRUE,
+    }
+
+    item EggCarton
+    {
+        Weight	=	1,
+        Type	=	Food,
+        DisplayName	=	Egg Carton,
+        Icon	=	EggCarton,
+        DaysFresh	=	14,
+        DaysTotallyRotten	=	21,
+    }
+
+    item CannedChili
+    {
+        Weight	=	0.8,
+        Type	=	Food,
+        DisplayName	=	Canned Chili,
+        Icon	=	CannedChili,
+        Carbohydrates = 33,
+        Proteins = 16,
+        Lipids = 7,
+        Calories = 260,
+        Packaged = TRUE,
+    }
+
+    item CannedBolognese
+    {
+        Weight	=	0.8,
+        Type	=	Food,
+        DisplayName	=	Canned Bolognese,
+        Icon	=	CannedBolognese,
+        Carbohydrates = 68,
+        Proteins = 18,
+        Lipids = 22,
+        Calories = 540,
+        Packaged = TRUE,
+    }
+
+    item Rice
+    {
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Rice,
+        Icon	=	RiceRaw,
+        HungerChange    =   -60,
+        UnhappyChange   =   40,
+        ThirstChange    =   60,
+        Carbohydrates = 648,
+        Proteins = 72,
+        Lipids = 0,
+        Calories = 2880,
+        Packaged = TRUE,
+    }
+
+    item Pasta
+    {
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Pasta,
+        Icon	=	SpagettiRaw,
+        HungerChange    =   -60,
+        UnhappyChange   =   40,
+        ThirstChange    =   60,
+        Carbohydrates = 656,
+        Proteins = 112,
+        Lipids = 16,
+        Calories = 3360,
+        Packaged = TRUE,
+    }
+
+    item WaterSaucepanRice
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Saucepan with Rice,
+        Icon	=	SaucepanFilled,
+        HungerChange    =   -10,
+        Carbohydrates = 108,
+        Proteins = 12,
+        Lipids = 0,
+        Calories = 480,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item WaterSaucepanPasta
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Saucepan with Pasta,
+        Icon	=	SaucepanFilled,
+        HungerChange    =   -10,
+        Carbohydrates = 109.3,
+        Proteins = 18.66,
+        Lipids = 2.66,
+        Calories = 560,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item PastaPan
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Pasta,
+        Icon	=	SaucepanFilled,
+        Carbohydrates = 109.3,
+        Proteins = 18.66,
+        Lipids = 2.66,
+        Calories = 560,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item RicePan
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Rice,
+        Icon	=	SaucepanFilled,
+        Carbohydrates = 0,
+        Proteins = 78,
+        Lipids = 48,
+        Calories = 720,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item HotDrink
+    {
+        Weight	=	0.8,
+        Type	=	Food,
+        DisplayName	=	Hot Drink,
+        Icon	=	MugFulll,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   10,
+        UnhappyChange   =   10,
+        ThirstChange    =   -20,
+        ReplaceOnUse    =   Mugl,
+        CustomContextMenu	=  Drink,
+		CustomEatSound = PZ_DrinkingFromBottle,
+        GoodHot = true,
+    }
+
+    item Coffee2
+    {
+        Weight	=	1,
+        Type	=	Food,
+        HungerChange    =   -30,
+        UnhappyChange   =   20,
+        ThirstChange    =   60,
+        FatigueChange	=	-50,
+        DisplayName	=	Coffee,
+        Icon	=	InstantCoffee,
+        EvolvedRecipe   =   HotDrink:5,
+        FoodType    =   Coffee,
+        Carbohydrates = 0,
+        Proteins = 1,
+        Lipids = 0,
+        Calories = 2,
+        Packaged = TRUE,
+    }
+
+    item Teabag2
+	{
+        Weight	=	0.1,
+        Type	=	Food,
+        HungerChange    =   -5,
+        UnhappyChange   =   10,
+        ThirstChange    =   10,
+        FatigueChange	=	-15,
+        DisplayName	=	Tea Bag,
+        Icon	=	Teabag,
+        EvolvedRecipe   =   HotDrink:5,
+        FoodType    =   Tea,
+        EvolvedRecipeName = Tea,
+	}
+
+    item WaterPotRice
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Cooking Pot with Rice,
+        Icon	=	Pot_Water,
+        HungerChange    =   -10,
+        Carbohydrates = 108,
+        Proteins = 12,
+        Lipids = 0,
+        Calories = 480,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Pot,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item WaterPotPasta
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Cooking Pot with Pasta,
+        Icon	=	Pot_Water,
+        HungerChange    =   -10,
+        Carbohydrates = 109.3,
+        Proteins = 18.66,
+        Lipids = 2.66,
+        Calories = 560,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Pot,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item PastaPot
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Pasta,
+        Icon	=	PotFull,
+        Carbohydrates = 109.3,
+        Proteins = 18.66,
+        Lipids = 2.66,
+        Calories = 560,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Pot,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item RicePot
+    {
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Rice,
+        Icon	=	PotFull,
+        Carbohydrates = 0,
+        Proteins = 78,
+        Lipids = 48,
+        Calories = 720,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   20,
+        ReplaceOnUse    =   Pot,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item RiceBowl
+    {
+        Weight	=	1,
+        Type	=	Food,
+        DisplayName	=	Bowl of Rice,
+        Icon	=	FriedRice,
+        IsCookable	=	    true,
+        MinutesToBurn   =   40,
+        MinutesToCook   =   10,
+        ReplaceOnUse    =   Bowl,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item PastaBowl
+    {
+        Weight	=	1,
+        Type	=	Food,
+        DisplayName	=	Bowl of Pasta,
+        Icon	=	FriedRice,
+        IsCookable	=	    true,
+        MinutesToBurn   =   40,
+        MinutesToCook   =   10,
+        ReplaceOnUse    =   Bowl,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item CannedCorn
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Corn,
+        Icon	=	CannedCorn,
+        Carbohydrates = 70,
+        Proteins = 7,
+        Lipids = 1.75,
+        Calories = 315,
+        Packaged = TRUE,
+    }
+
+    item CannedMushroomSoup
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Mushroom Soup,
+        Icon	=	CannedMushroomSoup,
+        Carbohydrates = 19,
+        Proteins = 3,
+        Lipids = 8,
+        Calories = 160,
+        Packaged = TRUE,
+    }
+
+    item CannedPeas
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Peas,
+        Icon	=	CannedPeas,
+        Carbohydrates = 52.5,
+        Proteins = 14,
+        Lipids = 0,
+        Calories = 280,
+        Packaged = TRUE,
+    }
+
+    item CannedPotato2
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Potato,
+        Icon	=	CannedPotato,
+        Carbohydrates = 35,
+        Proteins = 2.5,
+        Lipids = 0,
+        Calories = 175,
+        Packaged = TRUE,
+    }
+
+    item CannedSardines
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Sardines,
+        Icon	=	CannedSardines,
+        Carbohydrates = 0,
+        Proteins = 14,
+        Lipids = 11,
+        Calories = 150,
+        Packaged = TRUE,
+    }
+
+    item CannedTomato2
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Tomato,
+        Icon	=	CannedTomato,
+        Carbohydrates = 18,
+        Proteins = 3,
+        Lipids = 0,
+        Calories = 90,
+        Packaged = TRUE,
+    }
+
+    item CannedCarrots2
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Canned Carrots,
+        Icon	=	CannedCarrots,
+        Carbohydrates = 28,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10.5,
+        Packaged = TRUE,
+    }
+
+    item LogStacks2
+	{
+		Weight	=	6,
+		Type	=	Normal,
+		DisplayName	=	Two Logs Stack,
+		Icon	=	Logs2,
+	}
+
+	item LogStacks3
+    {
+        Weight	=	9,
+        Type	=	Normal,
+        DisplayName	=	Three Logs Stack,
+        Icon	=	Logs3,
+    }
+
+    item LogStacks4
+    {
+        Weight	=	12,
+        Type	=	Normal,
+        DisplayName	=	Four Logs Stack,
+        Icon	=	Logs4,
+    }
+
+    item SutureNeedle
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Suture Needle,
+		Icon	=	SutureNeedle,
+		MetalValue = 5,
+		Tooltip = Tooltip_SutureNeedle,
+	}
+
+    item SutureNeedleHolder
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Suture Needle Holder,
+		Icon	=	SutureNeedleHolder,
+		MetalValue = 9,
+		Tooltip = Tooltip_SutureNeedleHolder,
+	}
+
+    item Twigs
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Twigs,
+		Icon	=	Twigs,
+	}
+
+    item TreeBranch
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Tree Branch,
+		Icon	=	Branch,
+	}
+
+	item Stone
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Stone,
+        Icon	=	Rock,
+    }
+
+    item SharpedStone
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Chipped Stone,
+        Icon	=	RockSharpened,
+    }
+
+    item Tarp
+	{
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Tarp,
+		Icon	=	TentMaterial,
+	}
+
+    item Mattress
+	{
+		Weight	=	8,
+		Type	=	Normal,
+		DisplayName	=	Mattress,
+		Icon	=	Mattress,
+	}
+
+    item Bricktoys
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Bricktoys,
+		Icon	=	Bricktoys,
+	}
+
+    item Earbuds
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Earbuds,
+		Icon	=	Earbuds,
+	}
+
+    item Earrings
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Earrings,
+		Icon	=	Earrings,
+		MetalValue = 25,
+	}
+
+    item Frame
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Frame,
+		Icon	=	Frame,
+	}
+
+    item Glasses
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Glasses,
+		Icon	=	Glasses1,
+	}
+
+    item Glasses2
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Glasses,
+		Icon	=	Glasses2,
+	}
+
+    item Headphones
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Headphones,
+		Icon	=	Headphones,
+	}
+
+    item Necklacepearl
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Pearl Necklace,
+        Icon	=	Necklacepearl,
+        MetalValue = 35,
+    }
+
+    item Remote
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	TV Remote,
+        Icon	=	Remote,
+        MetalValue = 8,
+    }
+
+    item Ring
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Ring,
+        Icon	=	Ring,
+        MetalValue = 15,
+    }
+
+    item Rubberducky
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Rubber Duck,
+        Icon	=	Rubberducky,
+    }
+
+    item Soap
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Soap,
+        Icon	=	Soap,
+        OBSOLETE = true,
+    }
+
+    item CorpseMale
+	{
+		Weight	=	20.0,
+		Type	=	Normal,
+		DisplayName	=	Corpse,
+		Icon = media/ui/Container_DeadPerson_MaleZombie.png,
+		RequiresEquippedBothHands = true
+	}
+
+    item CorpseFemale
+	{
+		Weight	=	20.0,
+		Type	=	Normal,
+		DisplayName	=	Corpse,
+		Icon = media/ui/Container_DeadPerson_FemaleZombie.png,
+		RequiresEquippedBothHands = true
+	}
+
+    item PiePrep
+	{
+		Weight	=	0.5,
+		Type	=	Food,
+		DisplayName	=	Pie Preparation,
+		Icon	=	PieWhole,
+		UnhappyChange   =   -20,
+		HungerChange    =   -30,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 800,
+	}
+
+	item CakePrep
+	{
+		Weight	=	0.5,
+		Type	=	Food,
+		DisplayName	=	Cake Preparation,
+		Icon	=	Cake,
+		UnhappyChange   =   -20,
+		HungerChange    =   -30,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 800,
+	}
+
+    item MarchRidgeMap
+    {
+        Type				=			Normal,
+        DisplayName			=		    March Ridge Map,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map                 =           media/ui/LootableMaps/marchridgemap.png,
+    }
+
+    item MuldraughMap
+    {
+        Type				=			Normal,
+        DisplayName			=		    Muldraugh Map,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map                 =           media/ui/LootableMaps/muldraughmap.png,
+    }
+
+    item WestpointMap
+    {
+        Type				=			Normal,
+        DisplayName			=		    Westpoint Map,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map                 =           media/ui/LootableMaps/westpointmap.png,
+    }
+
+    item RosewoodMap
+    {
+        Type				=			Normal,
+        DisplayName			=		    Rosewood Map,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map                 =           media/ui/LootableMaps/rosewoodmap.png,
+    }
+
+    item RiversideMap
+    {
+        Type				=			Normal,
+        DisplayName			=		    Riverside Map,
+        Icon				=			Map,
+        Weight				=			0.1,
+        Map                 =           media/ui/LootableMaps/riversidemap.png,
+    }
+
+    item Umbrella
+    {
+        Type				=			Normal,
+        DisplayName			=		    Umbrella,
+        Icon				=			Umbrella,
+        Weight				=			0.2,
+        MetalValue = 9,
+    }
+
+    item Rainboots
+    {
+        Type				=			Normal,
+        DisplayName			=		    Rain Boots,
+        Icon				=			Rainboots,
+        Weight				=			0.1,
+    }
+
+    item Paperclip
+    {
+        Type				=			Normal,
+        DisplayName			=		    Paperclip,
+        Icon				=			Paperclip,
+        Weight				=			0.003,
+        MetalValue = 1,
+    }
+
+    item Doll
+    {
+        Type				=			Normal,
+        DisplayName			=		    Doll,
+        Icon				=			Doll,
+        Weight				=			0.1,
+    }
+
+    item Disc
+    {
+        Type				=			Normal,
+        DisplayName			=		    CD,
+        Icon				=			Disc,
+        Weight				=			0.1,
+    }
+
+    item Cornflour
+    {
+        Type				=			Normal,
+        DisplayName			=		    Corn Flour,
+        Icon				=			Cornflour,
+        Weight				=			0.3,
+    }
+
+    item Cork
+    {
+        Type				=			Normal,
+        DisplayName			=		    Cork,
+        Icon				=			Cork,
+        Weight				=			0.1,
+    }
+
+    item Corkscrew
+	{
+		Type				=			Normal,
+		DisplayName			=		    Corkscrew,
+		Icon				=			Corkscrew,
+		Weight				=			0.1,
+		MetalValue = 5,
+	}
+
+    item CakeBatter
+	{
+		Type				=			Normal,
+		DisplayName			=		    Cake Batter,
+		Icon				=			CakeBatter,
+		Weight				=			0.3,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 800,
+	}
+
+	item PieDough
+    {
+        Type				=			Normal,
+        DisplayName			=		    Pie Dough,
+        Icon				=			Dough,
+        Weight				=			0.3,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 800,
+    }
+
+    item BakingPan
+	{
+		Type				=			Normal,
+		DisplayName			=		    Baking Pan,
+		Icon				=			BakingPan,
+		Weight				=			0.1,
+		MetalValue = 60,
+	}
+
+    item DigitalWatch
+	{
+		Type				=			Normal,
+		DisplayName			=		    Digital Watch,
+		Icon				=			DigitalWatch,
+		Weight				=			0.0,
+		MetalValue = 3,
+		Obsolete = TRUE,
+	}
+
+    item DigitalWatch2
+    {
+        Type				=			AlarmClock,
+        DisplayName			=		    Digital Watch,
+        Icon				=			DigitalWatch,
+        Weight				=			0.0,
+        AlarmSound = watchAlarmLooped,
+        SoundRadius = 20,
+        MetalValue = 3,
+    }
+
+	item Scotchtape
+    {
+        Type				=			Normal,
+        DisplayName			=		    Adhesive Tape,
+        Icon				=			Scotchtape,
+        Weight				=			0.1,
+        Tooltip = Tooltip_FixItems,
+    }
+
+    item Toothbrush
+    {
+        Type				=			Normal,
+        DisplayName			=		    Tooth Brush,
+        Icon				=			Toothbrush,
+        Weight				=			0.1,
+    }
+
+    item Toothpaste
+    {
+        Type				=			Normal,
+        DisplayName			=		    Tooth Paste,
+        Icon				=			Toothpaste,
+        Weight				=			0.1,
+    }
+
+    item Soap2
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.05,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Soap,
+        Icon				=			Soap,
+        Weight				=			0.1,
+        cantBeConsolided    =           TRUE,
+    }
+
+    item Twine
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.2,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Twine,
+        Icon				=			Twine,
+        Weight				=			0.1,
+        cantBeConsolided = TRUE,
+    }
+
+    item Wire
+    {
+        Weight	            =	        0.2,
+        Type	            =	        Drainable,
+        DisplayName	        =	        Wire,
+        Icon	            =	        Wire,
+        UseWhileEquipped	=           FALSE,
+        UseDelta	        =	        0.2,
+        MetalValue = 20,
+        cantBeConsolided = TRUE,
+    }
+
+    item Yeast
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.2,
+        UseWhileEquipped	=	        FALSE,
+        DisplayName			=		    Yeast,
+        Icon				=			Yeast,
+        Weight				=			0.1,
+    }
+
+    item Woodglue
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.2,
+        UseWhileEquipped	=	        FALSE,
+        DisplayName			=		    Wood Glue,
+        Icon				=			Woodglue,
+        Weight				=			0.1,
+        Tooltip = Tooltip_FixItems,
+    }
+
+    item BathTowelWet
+	{
+		Type				=			Normal,
+		DisplayName			=		    Wet Bath Towel,
+		Icon				=			Bathtowel,
+		Weight				=			0.5,
+		Wet                 =           TRUE,
+        WetCooldown         =           10000,
+        ItemWhenDry         =           Base.BathTowel,
+	}
+  
+    item BathTowel
+	{
+		Weight	=	0.3,
+		Type	=	Drainable,
+		DisplayName	=	Bath Towel,
+        UseWhileEquipped	=	FALSE,
+		Icon	=	Bathtowel,
+        UseDelta	=	0.1,
+		ReplaceOnDeplete	=	BathTowelWet,
+		Tooltip = Tooltip_Bathtowel,
+	}
+	
+	item Bandaid
+	{
+		Type				=			Normal,
+		DisplayName			=			Adhesive Bandages,
+		Icon				=			Bandaid,
+		Weight				=			0.1,
+        CanBandage	=	true,
+        BandagePower    =   1.5,
+        Tooltip = Tooltip_UseOnHealthPanel,
+	}
+
+	item Bandage
+	{
+		Count	=	1,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Normal,
+		DisplayName	=	Bandage,
+		ReplaceOnUse    =   BandageDirty,
+		Icon	=	Bandage,
+		CanBandage	=	true,
+		BandagePower    =   4,
+		Tooltip = Tooltip_UseOnHealthPanel,
+	}
+
+	item BandageDirty
+    {
+        Count	=	1,
+        Weight	=	0.1,
+        AlwaysWelcomeGift	=	true,
+        Type	=	Normal,
+        DisplayName	=	Dirty Bandage,
+        Icon	=	BandageDirty,
+        CanBandage	=	true,
+        BandagePower    =   0,
+    }
+
+    item AlcoholBandage
+    {
+        Count	=	1,
+        Weight	=	0.1,
+        AlwaysWelcomeGift	=	true,
+        Type	=	Normal,
+        DisplayName	=	Sterilized Bandage,
+        ReplaceOnUse    =   BandageDirty,
+        Alcoholic	=	TRUE,
+        Icon	=	Bandage,
+        CanBandage	=	true,
+        BandagePower    =   4,
+        Tooltip = Tooltip_AlcoholBandage,
+    }
+
+	item NailsBox
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Box of Nails,
+        Icon	=	NailsBox,
+        MetalValue = 100,
+    }
+
+    item PaperclipBox
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Box of Paperclips,
+        Icon	=	PaperclipBox,
+        MetalValue = 40,
+    }
+
+    item ScrewsBox
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Box of Screws,
+        Icon	=	ScrewsBox,
+        MetalValue = 100,
+    }
+
+    item BulletsBox
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Box of 9mm Bullets,
+        DisplayCategory = Ammo,
+        Icon	=	HandgunAmmoBox,
+        MetalValue = 30,
+    }
+
+    item ShotgunShellsBox
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Box of Shotgun Shells,
+        DisplayCategory = Ammo,
+        Icon	=	ShotgunAmmoBox,
+        MetalValue = 24,
+    }
+
+    item Screws
+    {
+        Count	=	5,
+        Weight	=	0.1,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Screws,
+        Icon	=	Screws,
+        MetalValue = 1,
+    }
+
+    item Glue
+    {
+        Weight	=	0.1,
+        Type	=	Drainable,
+        UseDelta	=	0.2,
+        UseWhileEquipped	=	FALSE,
+        DisplayName	=	Glue,
+        Icon	=	Glue,
+        Tooltip = Tooltip_FixItems,
+    }
+
+    item Rope
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Rope,
+        Icon	=	Rope,
+    }
+
+    item DuctTape
+    {
+        Weight	=	0.3,
+        Type	=	Drainable,
+        UseDelta	=	0.25,
+        UseWhileEquipped	=	FALSE,
+        DisplayName	=	Duct Tape,
+        Icon	=	DuctTape,
+        Tooltip = Tooltip_FixItems,
+    }
+
+	item CardDeck
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Playing Cards,
+		Icon	=	CardDeck,
+	}
+
+	item Comb
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Comb,
+		Icon	=	Comb,
+	}
+
+	item Dice
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Dice,
+		Icon	=	Dice,
+	}
+
+	item Lipstick
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Lipstick,
+		Icon	=	Lipstick,
+		MetalValue = 1,
+	}
+  
+    item Cube
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Cube,
+		Icon	=	Cube,
+	}
+
+	item Locket
+	{
+		Weight	=	0.5,
+		Type	=	Normal,
+		DisplayName	=	Locket,
+		Icon	=	Locket,
+		MetalValue = 10,
+	}
+
+	item Mirror
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Mirror,
+		Icon	=	Mirror,
+		MetalValue = 2,
+	}
+
+	item Radio
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Radio,
+		Icon	=	Radio,
+		MetalValue = 10,
+	}
+
+	item Razor
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Razor,
+		Icon	=	Razor,
+		MetalValue = 5,
+	}
+
+	item String
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	String,
+		Icon	=	String,
+	}
+
+	item ToyBear
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Toy Bear,
+		Icon	=	ToyBear,
+	}
+
+	item PillsVitamins
+	{
+        FatigueChange	=	-2,
+		Weight	=	0.2,
+        UseDelta	=	0.1,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Vitamins,
+		Icon	=	Vitamins,
+		Tooltip = Tooltip_Vitamins,
+	}
+
+	item Wallet
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_01,
+	}
+
+	item Wallet2
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_02,
+	}
+
+	item Wallet3
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_03,
+	}
+
+	item Wallet4
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Wallet,
+		Icon	=	Wallet_04,
+	}
+
+	item WeddingRing_Man
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Wedding Ring,
+		Icon	=	WeddingRing_Man,
+		MetalValue = 15,
+	}
+
+	item WeddingRing_Woman
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Wedding Ring,
+		Icon	=	WeddingRing_Woman,
+		MetalValue = 15,
+	}
+
+	item Yoyo
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Yoyo,
+		Icon	=	Yoyo,
+	}
+  
+    item Spiffo
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Spiffo,
+		Icon	=	PlushSpiffo,
+	}
+
+
+    item Extinguisher
+	{
+		Weight	=	0.4,
+		Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+		DisplayName	=	Extinguisher,
+		Icon	=	Extinguisher,
+		MetalValue = 25,
+		Tooltip = Tooltip_Extinguisher,
+	}
+
+	item Lamp
+	{
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Lamp,
+        Icon	=	Lamp,
+        MetalValue = 12,
+    }
+
+/************************Food************************/
+
+    item FruitSalad
+	{
+		Type 				= 		Food,
+		DisplayName 		= 		Salad,
+		Icon 				= 		FruitSalad,
+		Weight 				= 		0.7,
+		HungerChange 		= 		-60,
+		BoredomChange 		= 		-5,
+		ReplaceOnUse 		= 		Bowl,
+		DaysFresh 			= 		2,
+		DaysTotallyRotten 	= 		3,
+	}
+
+    item CannedCornedBeefOpen
+    {
+        Weight	=	0.8,
+        Type	=	Food,
+        DisplayName	=	Open Canned Corned Beef,
+        Icon	=	CannedCornedBeefOpen,
+        HungerChange 		=		-25,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        EvolvedRecipe   =   Stew:15;Stir fry:15;Sandwich:10;Salad:10;Roasted Vegetables:15;PastaPot:15;PastaPan:15;RicePot:15;RicePan:15,
+        Carbohydrates = 0,
+        Proteins = 78,
+        Lipids = 48,
+        Calories = 720,
+        Packaged = TRUE,
+        FoodType            =       Meat,
+        EvolvedRecipeName = Canned Corned Beef,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedChiliOpen
+    {
+        Weight	=	0.8,
+        Type	=	Food,
+        DisplayName	=	Open Canned Chili,
+        Icon	=	CannedChiliOpen,
+        HungerChange 		=		-15,
+        DaysFresh			=	3,
+        DaysTotallyRotten	=	5,
+        EvolvedRecipe   =   Stew:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15,
+        Carbohydrates = 33,
+        Proteins = 16,
+        Lipids = 7,
+        Calories = 260,
+        Packaged = TRUE,
+        FoodType = Meat,
+        EvolvedRecipeName = Canned Chili,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedBologneseOpen
+    {
+        DisplayName	=	Open Canned Spaghetti Bolognese,
+        Icon	=	CannedBologneseOpen,
+        HungerChange 		=		-25,
+        DaysFresh			=	3,
+        DaysTotallyRotten	=	5,
+        EvolvedRecipe   =   Stew:10;Stir fry:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+        FoodType = Meat,
+        Weight	=	0.8,
+        Type	=	Food,
+        Carbohydrates = 68,
+        Proteins = 18,
+        Lipids = 22,
+        Calories = 540,
+        Packaged = TRUE,
+        EvolvedRecipeName = Canned Bolognese,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedCarrotsOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Carrots,
+        Icon	=	CannedCarrotsOpen,
+        HungerChange 		=		-12,
+        EvolvedRecipe = Soup:12;Stew:12;Pie:12;Stir fry:12;Sandwich:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        ThirstChange	=	-4,
+        Carbohydrates = 28,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10.5,
+        Packaged = TRUE,
+        FoodType    = Vegetables,
+        EvolvedRecipeName = Canned Carrots,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedCornOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Corn,
+        Icon	=	CannedCornOpen,
+        HungerChange 		=		-15,
+        EvolvedRecipe = Soup:15;Stew:15;Stir fry:15;Burger:8;Salad:15;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        ThirstChange	=	-4,
+        Carbohydrates = 70,
+        Proteins = 7,
+        Lipids = 1.75,
+        Calories = 315,
+        Packaged = TRUE,
+        FoodType    = Vegetables,
+        EvolvedRecipeName = Canned Corn,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedMushroomSoupOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Mushroom Soup,
+        Icon	=	CannedMushroomSoupOpen,
+        HungerChange 		=		-10,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        ThirstChange	=	-4,
+        Carbohydrates = 19,
+        Proteins = 3,
+        Lipids = 8,
+        Calories = 160,
+        Packaged = TRUE,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedPeasOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Peas,
+        Icon	=	CannedPeasOpen,
+        HungerChange 		=		-15,
+        EvolvedRecipe = Soup:15;Stew:15;Stir fry:15;Roasted Vegetables:15;RicePot:15;RicePan:15,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        ThirstChange	=	-3,
+        Carbohydrates = 52.5,
+        Proteins = 14,
+        Lipids = 0,
+        Calories = 280,
+        Packaged = TRUE,
+        FoodType    = Vegetables,
+        EvolvedRecipeName = Canned Peas,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedPotatoOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Potato,
+        Icon	=	CannedPotatoOpen,
+        HungerChange 		=		-18,
+        EvolvedRecipe       =       Soup:18;Stew:18;Pie:18;Stir fry:18;Salad:9;Roasted Vegetables:18,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        ThirstChange	=	-7,
+        Carbohydrates = 35,
+        Proteins = 2.5,
+        Lipids = 0,
+        Calories = 175,
+        Packaged = TRUE,
+        FoodType    = Vegetables,
+        EvolvedRecipeName = Canned Potato,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedSardinesOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Sardines,
+        Icon	=	CannedSardinesOpen,
+        HungerChange 		=		-13,
+        EvolvedRecipe = Stew:13;Stir fry:13;RicePot:13;RicePan:13;Sandwich:13,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        Carbohydrates = 0,
+        Proteins = 14,
+        Lipids = 11,
+        Calories = 150,
+        Packaged = TRUE,
+        FoodType    = Fish,
+        EvolvedRecipeName = Canned Sardines,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item CannedTomatoOpen
+    {
+        Weight	=	0.7,
+        Type	=	Food,
+        DisplayName	=	Open Canned Tomato,
+        Icon	=	CannedTomatoOpen,
+        HungerChange 		=		-12,
+        EvolvedRecipe       =       Soup:12;Stew:12;Pie:12;Stir fry:12;Sandwich:6;Burger:6;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+        DaysFresh			=	2,
+        DaysTotallyRotten	=	4,
+        ThirstChange	=	-8,
+        Carbohydrates = 18,
+        Proteins = 3,
+        Lipids = 0,
+        Calories = 90,
+        Packaged = TRUE,
+        FoodType    = Vegetables,
+        EvolvedRecipeName = Canned Tomato,
+        ReplaceOnUse    =   TinCanEmpty,
+    }
+
+    item Cherry
+    {
+        Type				=		Food,
+        DisplayName			=		Cherry,
+        Icon				=		Cherry,
+        Weight				=		0.3,
+        HungerChange 		=		-3,
+        DaysFresh 			=		4,
+        DaysTotallyRotten 	=	 	9,
+        EvolvedRecipe       =       Cake:3;FruitSalad:3,
+        FoodType            =       Fruits,
+        ThirstChange	=	-1,
+        Carbohydrates = 1.31,
+        Proteins = 0.09,
+        Lipids = 0,
+        Calories = 5,
+    }
+
+    item MintCandy
+    {
+        Type				=		Food,
+        DisplayName			=		Mint Candy,
+        Icon				=		MintCandy,
+        Weight				=		0.1,
+        HungerChange 		=		-2,
+        UnhappyChange	    =	    -10,
+        Carbohydrates = 15,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+    }
+
+	item Lollipop
+	{
+		HungerChange	=	-5,
+		Weight	=	0.1,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		DisplayName	=	Lollipop,
+		Icon	=	Lollipop,
+        Carbohydrates = 10,
+        Proteins = 0,
+        Lipids = 0.5,
+        Calories = 40,
+	}
+
+    item CandyPackage
+    {
+        Type				=		Food,
+        DisplayName			=		Candy Package,
+        Icon				=		CandyPackagei,
+        Weight				=		0.6,
+        Carbohydrates = 125,
+        Proteins = 0,
+        Lipids = 2.5,
+        Calories = 500,
+        PAckaged = TRUE,
+    }
+
+    item FrogMeat
+    {
+        Type				=		Food,
+        DisplayName			=		Frog Meat,
+        Icon				=		Frogmeat,
+        Weight				=		0.2,
+        HungerChange 		=		-10,
+        EvolvedRecipe       =       Soup:10;Stew:10;Stir fry:10;Salad:10;Roasted Vegetables:10,
+        DaysFresh 			=		4,
+        DaysTotallyRotten 	=	 	8,
+        IsCookable	        =	    true,
+        MinutesToBurn	    =	    40,
+        MinutesToCook	    =	    10,
+        FoodType            =       Meat,
+        Carbohydrates = 0,
+        Proteins = 14.6,
+        Lipids = 0.28,
+        Calories = 66,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item CookieJelly
+    {
+        Type				=		Food,
+        DisplayName			=		Cookie Jelly,
+        Icon				=		CookieJelly,
+        Weight				=		0.1,
+        HungerChange 		=		-7,
+        UnhappyChange	    =	    -10,
+        Carbohydrates = 22,
+        Proteins = 1,
+        Lipids = 8,
+        Calories = 160,
+    }
+
+    item SunflowerSeeds
+    {
+        Type				=		Food,
+        DisplayName			=		Sunflower Seeds,
+        Icon				=		SunflowerSeeds,
+        Weight				=		0.1,
+        HungerChange 		=		-5,
+        Carbohydrates = 14.12,
+        Proteins = 4.34,
+        Lipids = 5.48,
+        Calories = 155,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+    }
+
+    item Oatmeal
+    {
+        Type				=		Food,
+        DisplayName			=		Oatmeal,
+        Icon				=		Oatmeal,
+        Weight				=		0.8,
+        HungerChange 		=		-10,
+		DaysFresh 			=		1,
+		DaysTotallyRotten 	= 		1,
+        ReplaceOnUse    =   Bowl,
+        Carbohydrates = 81,
+        Proteins = 15,
+        Lipids = 9,
+        Calories = 300,
+    }
+
+    item CookieChocolateChip
+    {
+        Type				=		Food,
+        DisplayName			=		Cookie,
+        Icon				=		CookieChocolateChip,
+        Weight				=		0.1,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+        Carbohydrates = 22,
+        Proteins = 1,
+        Lipids = 8,
+        Calories = 160,
+    }
+
+    item JuiceBox
+	{
+		Type				=		Food,
+		DisplayName			=		Juice Box,
+		Icon				=		JuiceBox,
+		Weight				=		0.1,
+		HungerChange 		=		-2,
+		ThirstChange		=		-13,
+		UnhappyChange	    =	    -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = PZ_DrinkingFromBottle,
+        Carbohydrates = 14,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+        Packaged = TRUE,
+	}
+
+    item Macandcheese
+    {
+        Type				=		Food,
+        DisplayName			=		Mac and Cheese,
+        Icon				=		Macandcheese,
+        Weight				=		0.5,
+        HungerChange 		=		-40,
+        Carbohydrates = 126,
+        Proteins = 21,
+        Lipids = 12,
+        Calories = 690,
+        Packaged = TRUE,
+    }
+
+    item Honey
+    {
+        Type				=		Food,
+        DisplayName			=		Honey,
+        Icon				=		Honeybottle,
+        Weight				=		0.4,
+        HungerChange 		=		-20,
+        EvolvedRecipe       =       Cake:5;Sandwich:5;Salad:5;Roasted Vegetables:5;Stir fry:5;HotDrink:5,
+        Carbohydrates = 187,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 660,
+        Packaged = TRUE,
+        FoodType = NoExplicit,
+        CantBeFrozen = TRUE,
+    }
+
+    item Pineapple
+    {
+        Type				=		Food,
+        DisplayName			=		Pineapple,
+        Icon				=		Pineapple,
+        Weight				=		0.3,
+        HungerChange 		=		-25,
+        DaysFresh 			=		6,
+        DaysTotallyRotten 	=	 	14,
+        EvolvedRecipe       =       Cake:10;FruitSalad:10,
+        FoodType            =       Fruits,
+        ThirstChange	=	-13,
+        Carbohydrates = 118.7,
+        Proteins = 4.89,
+        Lipids = 1.09,
+        Calories = 452,
+    }
+
+    item Avocado
+    {
+        Type				=		Food,
+        DisplayName			=		Avocado,
+        Icon				=		Avocado,
+        Weight				=		0.3,
+        HungerChange 		=		-15,
+        DaysFresh 			=		6,
+        DaysTotallyRotten 	=	 	14,
+        EvolvedRecipe       =       Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:8;Salad:15;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType            =       Vegetables,
+        ThirstChange	=	-7,
+        Carbohydrates = 11.75,
+        Proteins = 2.67,
+        Lipids = 20.96,
+        Calories = 227,
+    }
+
+    item Zucchini
+    {
+        Type				=		Food,
+        DisplayName			=		Zucchini,
+        Icon				=		Zucchini,
+        Weight				=		0.3,
+        HungerChange 		=		-10,
+        DaysFresh 			=		6,
+        DaysTotallyRotten 	=	 	14,
+        EvolvedRecipe       =       Soup:10;Stew:10;Pie:10;Stir fry:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+        FoodType            =       Vegetables,
+        ThirstChange	=	-10,
+        Carbohydrates = 6.10,
+        Proteins = 2.37,
+        Lipids = 0.63,
+        Calories = 33,
+    }
+
+    item Tofu
+    {
+        Type				=		Food,
+        DisplayName			=		Tofu,
+        Icon				=		Tofu,
+        Weight				=		0.3,
+        HungerChange 		=		-10,
+        DaysFresh 			=		6,
+        DaysTotallyRotten 	=	 	14,
+        EvolvedRecipe       =       Soup:10;Stew:10;Stir fry:10;Burger:10;Salad:10;RicePot:10;RicePan:10,
+        FoodType            =       Vegetables,
+        Carbohydrates = 1,
+        Proteins = 5,
+        Lipids = 1,
+        Calories = 30,
+        Packaged = TRUE,
+    }
+
+    item Yoghurt
+    {
+        Type				=		Food,
+        DisplayName			=		Yogurt,
+        Icon				=		Yoghurt,
+        Weight				=		0.3,
+        HungerChange 		=		-10,
+        DaysFresh 			=		10,
+        DaysTotallyRotten 	=	 	15,
+        Carbohydrates = 1,
+        Proteins = 5,
+        Lipids = 1,
+        Calories = 30,
+        Packaged = TRUE,
+    }
+
+    item BreadDough
+    {
+        Type				=			Food,
+        DisplayName			=		    Bread,
+        Icon				=			Dough,
+        Weight				=			0.3,
+        HungerChange 		=		-15,
+        UnhappyChange	    =	    10,
+        ThirstChange		=		15,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        IsCookable	=	TRUE,
+        DaysTotallyRotten	=	9,
+        MinutesToBurn	=	50,
+        MinutesToCook	=	20,
+        Carbohydrates = 99,
+        Proteins = 17.7,
+        Lipids = 6.66,
+        Calories = 532,
+        DaysFresh	=	4,
+    }
+
+    item CakeSlice
+	{
+		Type				=		Food,
+		HungerChange 		=		-7,
+		UnhappyChange	    =	    -10,
+		DisplayName			=		Cake Slice,
+		Icon				=		CakeSlice,
+		Weight				=		0.2,
+		DaysFresh 			=		3,
+		DaysTotallyRotten 	=	 	5,
+        Carbohydrates = 1,
+        Proteins = 5,
+        Lipids = 5,
+        Calories = 70,
+	}
+
+    item PanFriedVegetables
+	{
+		Type				=		Food,
+		DisplayName			=		Stir fry,
+		Icon				=		PanFull,
+		Weight				=		1.2,
+		DaysFresh 			=		3,
+		DaysTotallyRotten 	=	 	5,
+		ReplaceOnUse	=	Pan,
+	}
+
+	item PanFriedVegetables2
+    {
+        Type				=		Food,
+        DisplayName			=		Roasted Vegetables,
+        Icon				=		RoastingpanFull,
+        Weight				=		1.2,
+        DaysFresh 			=		3,
+        DaysTotallyRotten 	=	 	5,
+        ReplaceOnUse	=	RoastingPan,
+    }
+
+    item Lettuce
+	{
+		Type				=		Food,
+		DisplayName			=		Lettuce,
+		Icon				=		Lettuce,
+		Weight				=		0.7,
+		HungerChange 		=		-15,
+		DaysFresh 			=		3,
+		DaysTotallyRotten 	=	 	5,
+		EvolvedRecipe = Sandwich:5;Burger:5;Salad:5,
+		FoodType    =   Vegetables,
+		ThirstChange	=	-7,
+        Carbohydrates = 10.33,
+        Proteins = 4.9,
+        Lipids = 0.54,
+        Calories = 54,
+	}
+
+    item BellPepper
+	{
+		HungerChange	=	-8,
+        Weight	=	0.2,
+        Type	=	Food,
+        DaysTotallyRotten	=	8,
+        DisplayName	=	Bell Pepper,
+        Icon	=	BellPepper,
+        DaysFresh	=	5,
+        EvolvedRecipe = Soup:8;Pie:8;Stir fry:8;Sandwich:8;Burger:8;Salad:8;Roasted Vegetables:8;RicePot:8;RicePan:8;PastaPot:8;PastaPan:8,
+        ThirstChange	=	-2,
+        FoodType    =   Vegetables,
+        Carbohydrates = 7,
+        Proteins = 1,
+        Lipids = 0,
+        Calories = 30,
+	}
+
+    item Mustard
+	{
+		HungerChange	=	-20,
+		Weight	=	0.2,
+		Type	=	Food,
+		UnhappyChange	=	30,
+		DisplayName	=	Mustard,
+		Icon	=	Mustard,
+		EvolvedRecipe = Sandwich:2;Burger:2;Salad:2;RicePot:2;RicePan:2;PastaPot:2;PastaPan:2,
+		Spice   =   true,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+
+    item Ketchup
+	{
+		HungerChange	=	-20,
+		Weight	=	0.2,
+		Type	=	Food,
+		UnhappyChange	=	30,
+		DisplayName	=	Ketchup,
+		Icon	=	Ketchup,
+		EvolvedRecipe = Sandwich:2;Burger:2;RicePot:2;RicePan:2;PastaPot:2;PastaPan:2,
+		Spice   =   true,
+        Carbohydrates = 370,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 1480,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+
+    item Marinara
+	{
+		HungerChange	=	-10,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Marinara,
+		Icon	=	Marinarai,
+		EvolvedRecipe = Sandwich:2;Burger:2;RicePot:2;RicePan:2;PastaPot:2;PastaPan:2,
+		Spice   =   true,
+        Carbohydrates = 55,
+        Proteins = 10,
+        Lipids = 7.5,
+        Calories = 350,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+
+    item Dogfood
+	{
+		Weight	=	1,
+		Type	=	Food,
+		DisplayName	=	Dogfood,
+		Icon	=	Dogfood,
+        Carbohydrates = 77.56,
+        Proteins = 16.04,
+        Lipids = 12.58,
+        Calories = 498,
+        Packaged = TRUE,
+	}
+
+    item OatsRaw
+	{
+		Weight	=	0.8,
+		Type	=	Food,
+		DisplayName	=	Can of Oats,
+		Icon	=	OatsRaw,
+		HungerChange = -50,
+        Carbohydrates = 405,
+        Proteins = 75,
+        Lipids = 45,
+        Calories = 1500,
+        Packaged = TRUE,
+	}
+
+    item PieWholeRaw
+	{
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		DisplayName	=	Pie,
+		Icon	=	PieWhole,
+        IsCookable	=	TRUE,
+		DaysTotallyRotten	=	9,
+		MinutesToBurn	=	110,
+        MinutesToCook	=	40,
+        ReplaceOnUse	=	BakingPan,
+		DaysFresh	=	4,
+        BadInMicrowave = true,
+	}
+
+    item CakeRaw
+	{
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		DisplayName	=	Cake,
+		Icon	=	Cake,
+        IsCookable	=	TRUE,
+		DaysTotallyRotten	=	9,
+		MinutesToBurn	=	110,
+        MinutesToCook	=	40,
+        ReplaceOnUse	=	BakingPan,
+		DaysFresh	=	4,
+        BadInMicrowave = true,
+	}
+
+	item Processedcheese
+	{
+		HungerChange	=	-5,
+		Weight	=	0.1,
+		Type	=	Food,
+		DaysTotallyRotten	=	10,
+		DisplayName	=	Processed Cheese,
+		Icon	=	Processedcheese,
+		DaysFresh	=	6,
+		EvolvedRecipe = Sandwich:5;Burger:5;RicePot:5;RicePan:5;PastaPot:5;PastaPan:5,
+		FoodType = NoExplicit,
+        Carbohydrates = 0,
+        Proteins = 4,
+        Lipids = 6,
+        Calories = 70,
+        Packaged = TRUE,
+	}
+
+	item Peach
+	{
+		HungerChange	=	-12,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	8,
+		DisplayName	=	Peach,
+		Icon	=	Peach,
+		DaysFresh	=	5,
+		EvolvedRecipe = Cake:6;FruitSalad:6,
+		FoodType    =   Fruits,
+		ThirstChange	=	-5,
+        Carbohydrates = 14.31,
+        Proteins = 1.36,
+        Lipids = 0.38,
+        Calories = 58,
+	}
+
+	item Modjeska
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		Type	=	Food,
+		DisplayName	=	Modjeska,
+		Icon	=	Modjeska,
+		Carbohydrates = 15,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+	}
+
+	item Corndog
+	{
+		HungerChange	=	-12,
+		Weight	=	0.1,
+		Type	=	Food,
+		DaysTotallyRotten	=	6,
+		DisplayName	=	Corndog,
+		Icon	=	Corndog,
+		DaysFresh	=	3,
+        Carbohydrates = 7,
+        Proteins = 19,
+        Lipids = 9,
+        Calories = 180,
+	}
+
+	item BreadSlices
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		Type	=	Food,
+		DaysTotallyRotten	=	2,
+		DisplayName	=	Bread Slices,
+		Icon	=	BreadSlices,
+		DaysFresh	=	1,
+        Carbohydrates = 33,
+        Proteins = 5.9,
+        Lipids = 2.22,
+        Calories = 177,
+	}
+
+	item Sandwich
+    {
+        HungerChange	=	-10,
+        Weight	=	0.2,
+        Type	=	Food,
+        DaysTotallyRotten	=	6,
+        DisplayName	=	Sandwich,
+        Icon	=	Sandwich,
+        DaysFresh	=	3,
+    }
+
+    item BleachEmpty
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Bleach Bottle,
+        Icon	=	Bleach,
+    }
+
+	item Bleach
+	{
+		UnhappyChange	=	99,
+		Weight	=	0.3,
+		Type	=	Food,
+		ThirstChange	=	-60,
+		DisplayName	=	Bleach,
+		Icon	=	Bleach,
+		Poison = true,
+		DisplayCategory = Item,
+		PoisonDetectionLevel = 7,
+	    PoisonPower = 40,
+	    UseForPoison = 15,
+		CustomContextMenu = Drink,
+		CustomEatSound = PZ_DrinkingFromBottle,
+		CantBeFrozen = TRUE,
+	}
+
+	item BeefJerky
+	{
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Beef Jerky,
+		Icon	=	BeefJerky,
+		EvolvedRecipe = Stew:15;Pie:15;Stir fry:15;Sandwich:5;Salad:5;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+		FoodType    =   Meat,
+        Carbohydrates = 6,
+        Proteins = 1,
+        Lipids = 1,
+        Calories = 80,
+        Packaged = TRUE,
+	}
+
+	item BerryBlack
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryBlack,
+		DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:10;FruitSalad:10,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 5,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 23,
+	}
+
+	item BerryBlue
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryBlue,
+		DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:10;FruitSalad:10,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 5,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 23,
+	}
+
+	item BerryGeneric1
+	{
+		HungerChange	=	-5,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryGeneric1,
+        DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:5;FruitSalad:5,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 3,
+        Proteins = 2,
+        Lipids = 0,
+        Calories = 12,
+	}
+
+	item BerryGeneric2
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryGeneric2,
+        DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:10;FruitSalad:10,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 5,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 23,
+	}
+
+	item BerryGeneric3
+	{
+		HungerChange	=	-5,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryGeneric3,
+        DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:5;FruitSalad:5,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 3,
+        Proteins = 2,
+        Lipids = 0,
+        Calories = 8,
+	}
+
+	item BerryGeneric4
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryGeneric4,
+        DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:10;FruitSalad:10,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 5,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 23,
+	}
+
+	item BerryGeneric5
+	{
+		HungerChange	=	-10,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryGeneric5,
+        DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        EvolvedRecipe = Cake:10;FruitSalad:10,
+        FoodType    =   Fruits,
+        ThirstChange	=	-1,
+        HerbalistType = Berry,
+        Carbohydrates = 5,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 23,
+	}
+
+	item BerryPoisonIvy
+	{
+		HungerChange	=	-5,
+		Weight	=	0.1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Berries,
+		Icon	=	BerryPoisonIvy,
+		EvolvedRecipe = Cake:5;FruitSalad:5,
+		FoodType    =   Fruits,
+		ThirstChange	=	-1,
+        DaysTotallyRotten	=	10,
+        DaysFresh	=	6,
+        HerbalistType = Berry,
+        Carbohydrates = 5,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 23,
+	}
+
+	item Candycane
+	{
+		HungerChange	=	-10,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Candycane,
+		Icon	=	Candycane,
+        Carbohydrates = 4.33,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 16.6,
+	}
+
+	item Cereal
+	{
+		HungerChange	=	-40,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Cereal,
+		Icon	=	Cereal,
+        Carbohydrates = 572,
+        Proteins = 52,
+        Lipids = 26,
+        Calories = 2360,
+        Packaged = TRUE,
+	}
+
+    item CerealBowl
+    {
+        Type				=		Food,
+        DisplayName			=		Cereal Bowl,
+        Icon				=		Oatmeal,
+        Weight				=		0.8,
+        HungerChange 		=		-8,
+        ThirstChange		=		-20,
+		DaysFresh 			=		1,
+		DaysTotallyRotten 	= 		1,
+        ReplaceOnUse    =   Bowl,
+        Carbohydrates = 71.5,
+        Proteins = 6.5,
+        Lipids = 3.25,
+        Calories = 295,
+    }
+
+	item DogfoodOpen
+	{
+		HungerChange	=	-30,
+		Weight	=	1,
+		Type	=	Food,
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	7,
+		UnhappyChange	=	50,
+		DisplayName	=	Open Dogfood,
+		Icon	=	DogfoodOpen,
+        Carbohydrates = 77.56,
+        Proteins = 16.04,
+        Lipids = 12.58,
+        Calories = 498,
+        Packaged = TRUE,
+        ReplaceOnUse    =   TinCanEmpty,
+	}
+
+	item Icecream
+	{
+		HungerChange	=	-30,
+		Weight	=	0.2,
+		UnhappyChange	=	-10,
+        DaysFresh	=	1,
+        DaysTotallyRotten	=	1,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Icecream,
+		Icon	=	Icecream,
+        Carbohydrates = 180,
+        Proteins = 26,
+        Lipids = 84,
+        Calories = 1680,
+        ReplaceOnRotten = IcecreamMelted,
+        Packaged = TRUE,
+	}
+
+	item IcecreamMelted
+	{
+		HungerChange	=	-30,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Melted Icecream,
+		Icon	=	IcecreamMelted,
+        Carbohydrates = 180,
+        Proteins = 26,
+        Lipids = 84,
+        Calories = 1680,
+        Packaged = TRUE,
+	}
+
+	item Lemon
+	{
+		HungerChange	=	-10,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	9,
+		DisplayName	=	Lemon,
+		Icon	=	Lemon,
+		DaysFresh	=	7,
+		EvolvedRecipe = Cake:10;FruitSalad:10,
+		FoodType    =   Fruits,
+		ThirstChange	=	-5,
+        Carbohydrates = 5.41,
+        Proteins = 0.64,
+        Lipids = 0.17,
+        Calories = 17,
+	}
+
+	item Burger
+    {
+        HungerChange	=	-25,
+        Weight	=	0.3,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Burger,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Burger,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 37,
+        Calories = 440,
+    }
+
+    item BurgerRecipe
+    {
+        HungerChange	=	-20,
+        Weight	=	0.3,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Burger,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Burger,
+    }
+
+    item Pizza
+    {
+        HungerChange	=	-25,
+        Weight	=	0.3,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Pizza,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Pizza,
+        Carbohydrates = 120,
+        Proteins = 42,
+        Lipids = 39,
+        Calories = 990,
+    }
+
+    item Fries
+    {
+        HungerChange	=	-10,
+        Weight	=	0.4,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Fries,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Fries,
+        Carbohydrates = 35.97,
+        Proteins = 3.35,
+        Lipids = 5.19,
+        Calories = 203,
+    }
+
+    item Pancakes
+    {
+        HungerChange	=	-20,
+        Weight	=	0.3,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Pancakes,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Pancakes,
+        Carbohydrates = 42,
+        Proteins = 6,
+        Lipids = 2,
+        Calories = 210,
+    }
+
+    item Waffles
+    {
+        HungerChange	=	-15,
+        Weight	=	0.3,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Waffles,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Waffles,
+        Carbohydrates = 13,
+        Proteins = 3,
+        Lipids = 4,
+        Calories = 80,
+    }
+
+    item MeatPatty
+    {
+        HungerChange	=	-40,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Meat Patty,
+        Icon	=	MeatPatty,
+        DaysFresh	=	2,
+        MinutesToCook	=	50,
+        EvolvedRecipe = Stew:15;Pie:15;Burger:10,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 26,
+        Lipids = 30,
+        Calories = 380,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+	item Milk
+	{
+		HungerChange	=	-10,
+		Weight	=	1.0,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		ThirstChange	=	-100,
+		DisplayName	=	Milk,
+		Icon	=	Milk,
+        DaysFresh 			=		4,
+        DaysTotallyRotten 	=	 	7,
+		CustomContextMenu	=		Drink,
+		CustomEatSound		=		PZ_DrinkingFromBottle,
+		EvolvedRecipe = HotDrink:2,
+        FoodType    =   NoExplicit,
+        Carbohydrates = 13,
+        Proteins = 8,
+        Lipids = 2.5,
+        Calories = 110,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+
+	item MushroomGeneric1
+	{
+		HungerChange	=	-13,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric1,
+		EvolvedRecipe = Stir fry:13;Stew:13;Pie:13;Soup:13;Sandwich:13;Salad:13;Roasted Vegetables:13;RicePot:13;RicePan:13;PastaPot:13;PastaPan:13,
+		ThirstChange	=	-1,
+		FoodType    =   Vegetables,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.12,
+        Proteins = 2.04,
+        Lipids = 0.24,
+        Calories = 30,
+	}
+
+	item MushroomGeneric2
+	{
+		HungerChange	=	-13,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric2,
+        EvolvedRecipe = Stir fry:13;Stew:13;Pie:13;Soup:13;Sandwich:13;Salad:13;Roasted Vegetables:13;RicePot:13;RicePan:13;PastaPot:13;PastaPan:13,
+		FoodType    =   Vegetables,
+		ThirstChange	=	-1,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.12,
+        Proteins = 2.04,
+        Lipids = 0.24,
+        Calories = 30,
+	}
+
+	item MushroomGeneric3
+	{
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric3,
+		ThirstChange	=	-1,
+        EvolvedRecipe = Stir fry:15;Stew:15;Pie:15;Soup:15;Sandwich:15;Salad:15;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+		FoodType    =   Vegetables,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.56,
+        Proteins = 2.36,
+        Lipids = 0.32,
+        Calories = 32,
+	}
+
+	item MushroomGeneric4
+	{
+		HungerChange	=	-13,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric4,
+		ThirstChange	=	-1,
+        EvolvedRecipe = Stir fry:13;Stew:13;Pie:13;Soup:13;Sandwich:13;Salad:13;Roasted Vegetables:13;RicePot:13;RicePan:13;PastaPot:13;PastaPan:13,
+		FoodType    =   Vegetables,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.12,
+        Proteins = 2.04,
+        Lipids = 0.24,
+        Calories = 30,
+	}
+
+	item MushroomGeneric5
+	{
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric5,
+		ThirstChange	=	-1,
+        EvolvedRecipe = Stir fry:15;Stew:15;Pie:15;Soup:15;Sandwich:15;Salad:15;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+		FoodType    =   Vegetables,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.56,
+        Proteins = 2.36,
+        Lipids = 0.32,
+        Calories = 32,
+	}
+
+	item MushroomGeneric6
+	{
+		HungerChange	=	-13,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric6,
+		ThirstChange	=	-1,
+        EvolvedRecipe = Stir fry:13;Stew:13;Pie:13;Soup:13;Sandwich:13;Salad:13;Roasted Vegetables:13;RicePot:13;RicePan:13;PastaPot:13;PastaPan:13,
+		FoodType    =   Vegetables,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.12,
+        Proteins = 2.04,
+        Lipids = 0.24,
+        Calories = 30,
+	}
+
+	item MushroomGeneric7
+	{
+		HungerChange	=	-13,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		DisplayName	=	Mushrooms,
+		Icon	=	MushroomGeneric7,
+		ThirstChange	=	-1,
+        EvolvedRecipe = Stir fry:13;Stew:13;Pie:13;Soup:13;Sandwich:13;Salad:13;Roasted Vegetables:13;RicePot:13;RicePan:13;PastaPot:13;PastaPan:13,
+		FoodType    =   Vegetables,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	4,
+        HerbalistType = Mushroom,
+        Carbohydrates = 2.12,
+        Proteins = 2.04,
+        Lipids = 0.24,
+        Calories = 32,
+	}
+
+	item Onion
+	{
+		HungerChange	=	-10,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	9,
+		DisplayName	=	Onion,
+		Icon	=	Onion,
+		DaysFresh	=	7,
+		EvolvedRecipe = Soup:10;Stew:10;Pie:10;Stir fry:10;Sandwich:5;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+		FoodType    =   Vegetables,
+        Carbohydrates = 6.54,
+        Proteins = 0.77,
+        Lipids = 0.07,
+        Calories = 28,
+	}
+
+    item FishFillet
+    {
+        HungerChange	=	-25,
+        Weight	=	0.2,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	50,
+        DisplayName	=	Fish Fillet,
+        Icon	=	FishFillet,
+        DaysFresh	=	2,
+        MinutesToCook	=	20,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Fish,
+        BadInMicrowave = true,
+        GoodHot = true,
+    }
+
+    item Hotdog
+    {
+        HungerChange	=	-20,
+        Weight	=	0.3,
+        Type	=	Food,
+        DaysTotallyRotten	=	6,
+        DisplayName	=	Hotdog,
+        Icon	=	HotdogCrafted,
+        DaysFresh	=	3,
+        Carbohydrates = 2,
+        Proteins = 2,
+        Lipids = 12,
+        Calories = 100,
+    }
+
+    item MuttonChop
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Mutton Chop,
+        Icon	=	Mutton,
+        DaysFresh	=	2,
+        MinutesToCook	=	50,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0.08,
+        Proteins = 33,
+        Lipids = 11,
+        Calories = 234,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item PorkChop
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Pork Chop,
+        Icon	=	Porkchop,
+        DaysFresh	=	2,
+        MinutesToCook	=	50,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 6,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Rabbitmeat
+    {
+        HungerChange	=	-30,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Rabbit Meat,
+        Icon	=	Rabbitmeat,
+        DaysFresh	=	2,
+        MinutesToCook	=	25,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Game,
+        Carbohydrates = 20,
+        Proteins = 185,
+        Lipids = 20,
+        Calories = 969,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Smallanimalmeat
+    {
+        HungerChange	=	-15,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Small Animal Meat,
+        Icon	=	Smallanimalmeat,
+        DaysFresh	=	2,
+        MinutesToCook	=	20,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Game,
+        Carbohydrates = 5,
+        Proteins = 45,
+        Lipids = 7.25,
+        Calories = 201,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Smallbirdmeat
+    {
+        HungerChange	=	-15,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Small Bird Meat,
+        Icon	=	Smallbirdmeat,
+        DaysFresh	=	2,
+        MinutesToCook	=	20,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Game,
+        Carbohydrates = 5,
+        Proteins = 90,
+        Lipids = 8.25,
+        Calories = 261,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item ChickenFried
+    {
+        HungerChange	=	-15,
+        Weight	=	0.1,
+        AlwaysWelcomeGift	=	true,
+        Type	=	Food,
+        DisplayName	=	Fried Chicken,
+        Icon	=	ChickenFried,
+		DaysFresh	=	2,
+        DaysTotallyRotten	=	4,
+        Carbohydrates = 17,
+        Proteins = 16,
+        Lipids = 14,
+        Calories = 260,
+    }
+
+    item Pickles
+    {
+        HungerChange	=	-5,
+        Weight	=	0.1,
+        AlwaysWelcomeGift	=	true,
+        Type	=	Food,
+        DisplayName	=	Pickles,
+        Icon	=	Pickles,
+        EvolvedRecipe = Sandwich:5;Burger:5;Salad:5;RicePot:5;RicePan:5;PastaPot:5;PastaPan:5,
+        FoodType    =   NoExplicit,
+        Carbohydrates = 1,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 5,
+    }
+
+    item Worm
+    {
+        HungerChange	=	-5,
+        Weight	=	0.01,
+        Type	=	Food,
+        DisplayName	=	Worm,
+        Icon	=	Worm,
+        UnhappyChange	=	20,
+        FishingLure     =   true,
+        Carbohydrates = 0,
+        Proteins = 0.5,
+        Lipids = 0.1,
+        Calories = 3,
+    }
+
+    item Rosehips
+    {
+        HungerChange	=	-6,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Rosehips,
+        Icon	=	Rosehips,
+        Carbohydrates = 19,
+        Proteins = 2,
+        Lipids = 0,
+        Calories = 81,
+    }
+
+    item GrapeLeaves
+    {
+        HungerChange	=	-4,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Grape Leaves,
+        Icon	=	GrapeLeaves,
+        Carbohydrates = 11,
+        Proteins = 4,
+        Lipids = 2,
+        Calories = 73,
+    }
+
+    item Violets
+    {
+        HungerChange	=	-2,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Violets,
+        Icon	=	Violets,
+        Carbohydrates = 7,
+        Proteins = 1,
+        Lipids = 0,
+        Calories = 27,
+    }
+
+    item WildEggs
+    {
+        HungerChange	=	-10,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Wild Eggs,
+        Icon	=	WildEggs,
+        DaysFresh	=	14,
+        DaysTotallyRotten	=	21,
+        IsCookable	=	TRUE,
+        EvolvedRecipe = Stir fry:10;Sandwich:10|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+        FoodType = Egg,
+        MinutesToBurn	=	30,
+        MinutesToCook	=	10,
+        DangerousUncooked	=	TRUE,
+        Carbohydrates = 0.32,
+        Proteins = 5.55,
+        Lipids = 4.18,
+        Calories = 63,
+        CantBeFrozen = TRUE,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Cockroach
+    {
+        HungerChange	=	-11,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Cockroach,
+        Icon	=	Cockroach,
+        UnhappyChange	=	20,
+        FishingLure     =   true,
+        IsCookable	=	TRUE,
+        MinutesToBurn	=	25,
+        MinutesToCook	=	5,
+        Carbohydrates = 1.27,
+        Proteins = 7.41,
+        Lipids = 3.9,
+        Calories = 30,
+    }
+
+    item Cricket
+    {
+        HungerChange	=	-6,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Cricket,
+        Icon	=	Cricket,
+        UnhappyChange	=	20,
+        FishingLure     =   true,
+        IsCookable	=	TRUE,
+        MinutesToBurn	=	25,
+        MinutesToCook	=	5,
+        Carbohydrates = 1.34,
+        Proteins = 3.6,
+        Lipids = 1.32,
+        Calories = 20,
+    }
+
+    item Grasshopper
+    {
+        HungerChange	=	-7,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Grasshopper,
+        Icon	=	Grasshopper,
+        UnhappyChange	=	20,
+        FishingLure     =   true,
+        IsCookable	=	TRUE,
+        MinutesToBurn	=	25,
+        MinutesToCook	=	5,
+        Carbohydrates = 3,
+        Proteins = 5.55,
+        Lipids = 0.24,
+        Calories = 25,
+    }
+
+    item MortarPestle
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Mortar and Pestle,
+        Icon	=	MortarPestle,
+    }
+
+    item Plantain
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Plantain,
+        Icon	=	PlantainPlantago,
+        Tooltip = Tooltip_Plantain,
+    }
+
+     item PlantainCataplasm
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Plantain Poultice,
+        Icon	=	MashedHerbs,
+        Tooltip = Tooltip_Plantain,
+    }
+
+    item Comfrey
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Comfrey,
+        Icon	=	Comfrey,
+        Tooltip = Tooltip_Comfrey,
+    }
+
+    item ComfreyCataplasm
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Comfrey Poultice,
+        Icon	=	MashedHerbs,
+        Tooltip = Tooltip_Comfrey,
+    }
+
+    item WildGarlic
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Wild Garlic,
+        Icon	=	WildGarlic,
+        Tooltip = Tooltip_Garlic,
+    }
+
+    item WildGarlicCataplasm
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Wild Garlic Poultice,
+        Icon	=	MashedHerbs,
+        Tooltip = Tooltip_Garlic,
+    }
+
+    item CommonMallow
+    {
+        HungerChange	=	-1,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Common Mallow,
+        Icon	=	CommonMallow,
+        FluReduction    =   5,
+        Tooltip = Tooltip_Mallow,
+    }
+
+    item LemonGrass
+    {
+        HungerChange	=	-1,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Lemon Grass,
+        Icon	=	LemonGrass,
+        ReduceFoodSickness = 10,
+        Tooltip = Tooltip_LemonGrass,
+    }
+
+    item BlackSage
+    {
+        HungerChange	=	-1,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Black Sage,
+        Icon	=	BlackSage,
+        PainReduction = 7,
+        Tooltip = Tooltip_BlackSage,
+    }
+
+    item Ginseng
+    {
+        HungerChange	=	-1,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Ginseng,
+        Icon	=	Ginseng,
+        EnduranceChange	=	2,
+        Tooltip = Tooltip_Ginseng,
+    }
+
+    item DeadRat
+	{
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		AlwaysWelcomeGift	=	true,
+		Type	=	Food,
+		UnhappyChange	=	30,
+		DisplayName	=	Dead Rat,
+		Icon	=	DeadRat,
+        IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	10,
+		MinutesToBurn	=	60,
+        MinutesToCook	=	20,
+		DaysFresh	=	6,
+        Carbohydrates = 0,
+        Proteins = 10,
+        Lipids = 0,
+        Calories = 50,
+        BadInMicrowave = true,
+	}
+
+    item DeadMouse
+    {
+        HungerChange	=	-10,
+        Weight	=	0.2,
+        Type	=	Food,
+        UnhappyChange	=	30,
+        DisplayName	=	Dead Mouse,
+        Icon	=	MouseDead,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	10,
+        MinutesToBurn	=	50,
+        MinutesToCook	=	15,
+        DaysFresh	=	6,
+        Carbohydrates = 0,
+        Proteins = 7,
+        Lipids = 0,
+        Calories = 30,
+        BadInMicrowave = true,
+    }
+
+    item DeadRabbit
+    {
+        HungerChange	=	-40,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Dead Rabbit,
+        Icon	=	RabbitDead,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	12,
+        MinutesToBurn	=	60,
+        MinutesToCook	=	25,
+        DaysFresh	=	8,
+        Carbohydrates = 0,
+        Proteins = 100.8,
+        Lipids = 9.58,
+        Calories = 373,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item DeadSquirrel
+    {
+        HungerChange	=	-30,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Dead Squirrel,
+        Icon	=	SquirrelDead,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	12,
+        MinutesToBurn	=	60,
+        MinutesToCook	=	25,
+        DaysFresh	=	8,
+        Carbohydrates = 0,
+        Proteins = 30,
+        Lipids = 3.25,
+        Calories = 161,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item DeadBird
+    {
+        HungerChange	=	-20,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Dead Bird,
+        Icon	=	BirdDead,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	12,
+        MinutesToBurn	=	60,
+        MinutesToCook	=	25,
+        DaysFresh	=	8,
+        Carbohydrates = 0,
+        Proteins = 30,
+        Lipids = 3.25,
+        Calories = 161,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+/************************Container************************/
+
+    item FirstAidKit
+	{
+		WeightReduction	=	5,
+		Weight	=	1,
+		Type	=	Container,
+		Capacity	=	5,
+		DisplayName	=	First Aid Kit,
+		Icon	=	FirstAid,
+		MetalValue = 15,
+	}
+
+	item Duffelbag
+	{
+		WeightReduction	=	65,
+		Weight	=	1,
+		Type	=	Container,
+		Capacity	=	18,
+		DisplayName	=	Duffelbag,
+		Icon	=	Duffelbag,
+        CanBeEquipped = Back,
+	}
+
+	item Plasticbag
+	{
+		WeightReduction	=	30,
+		Weight	=	0.1,
+		Type	=	Container,
+		Capacity	=	8,
+		DisplayName	=	Plastic Bag,
+		Icon	=	Plasticbag,
+	}
+
+	item Garbagebag
+    {
+        WeightReduction	=	10,
+        Weight	=	0.1,
+        Type	=	Container,
+        Capacity	=	20,
+        DisplayName	=	Garbage Bag,
+        Icon	=	Garbagebag,
+    }
+
+	item Tote
+	{
+		WeightReduction	=	50,
+		Weight	=	0.5,
+		Type	=	Container,
+		Capacity	=	12,
+		DisplayName	=	Tote Bag,
+		Icon	=	Tote,
+	}
+
+	item Purse
+    {
+        WeightReduction	=	55,
+        Weight	=	0.5,
+        Type	=	Container,
+        Capacity	=	12,
+        DisplayName	=	Purse,
+        Icon	=	Purse,
+    }
+  
+	item Schoolbag
+	{
+		WeightReduction	=	60,
+		Weight	=	0.5,
+		Type	=	Container,
+		Capacity	=	15,
+		DisplayName	=	Schoolbag,
+		Icon	=	Backpack,
+        CanBeEquipped = Back,
+        OpenSound   =   PZ_OpenBag,
+        CloseSound   =   PZ_CloseBag,
+        PutInSound   =   PZ_PutInBag,
+	}
+  
+    item NormalHikingBag
+	{
+		WeightReduction	=	70,
+		Weight	=	0.5,
+		Type	=	Container,
+		Capacity	=	20,
+		DisplayName	=	Normal Hiking Bag,
+		Icon	=	Duffelbag,
+        CanBeEquipped = Back,
+        OpenSound   =   PZ_OpenBag,
+        CloseSound   =   PZ_CloseBag,
+        PutInSound   =   PZ_PutInBag,
+	}
+
+    item BigHikingBag
+	{
+		WeightReduction	=	80,
+		Weight	=	0.5,
+		Type	=	Container,
+		Capacity	=	22,
+		DisplayName	=	Big Hiking Bag,
+		Icon	=	Duffelbag,
+        CanBeEquipped = Back,
+        OpenSound   =   PZ_OpenBag,
+        CloseSound   =   PZ_CloseBag,
+        PutInSound   =   PZ_PutInBag,
+	}
+
+	item EmptySandbag
+    {
+        Weight	=	0.1,
+        Type	=	Container,
+        WeightReduction	=	10,
+        Capacity	=	15,
+        DisplayName	=	Sack,
+        Icon	=	SandbagEmpty,
+    }
+
+    item CompostBag
+    {
+        Type				=		Drainable,
+        DisplayName			=		Compost Bag,
+        Icon				=		Compost,
+        Weight				=		2.0,
+        UseDelta			=		0.25,
+        UseWhileEquipped	=	    false,
+        ReplaceOnDeplete	=	EmptySandbag,
+        Tooltip = Tooltip_Fertilizer,
+    }
+
+    item Disinfectant
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.1,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Bottle of Disinfectant,
+        Icon				=			Alcohol,
+        Weight				=			0.3,
+        AlcoholPower        =           3,
+        Tooltip = Tooltip_Disinfectant,
+    }
+
+    item AlcoholWipes
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.2,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Alcohol Wipes,
+        Icon				=			AlcoholWipes,
+        Weight				=			0.3,
+        AlcoholPower        =           4,
+        Tooltip = Tooltip_AlcoholBandage,
+    }
+
+    item CottonBalls
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Cotton Balls,
+        Icon	=	CottonBalls,
+    }
+
+    item Splint
+    {
+        Weight	=	1,
+        Type	=	Normal,
+        DisplayName	=	Splint,
+        Icon	=	Splint,
+        Tooltip = Tooltip_Splint,
+        MetalValue = 1,
+    }
+
+    item Antibiotics
+    {
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Antibiotics,
+        Icon	=	Antibiotics,
+        ReduceInfectionPower     =   50,
+        CustomContextMenu   =   Take,
+        CantBeFrozen = TRUE,
+        Tooltip = Tooltip_Antibiotics,
+    }
+
+    item AlcoholedCottonBalls
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        1,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Cotton Balls Doused in Alcohol,
+        Icon				=			CottonBalls,
+        Weight				=			0.1,
+        AlcoholPower        =           4,
+        Tooltip = Tooltip_AlcoholBandage,
+    }
+
+    item Tweezers
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Tweezers,
+        Icon	=	Tweezers,
+        Tooltip = Tooltip_Tweezers,
+        MetalValue = 1,
+    }
+
+    /************************Traps************************/
+    item TrapSnare
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Snare Trap,
+        Icon	=	TrapSnare,
+        Trap    =   true,
+    }
+
+    item TrapCage
+    {
+        Weight	=	1,
+        Type	=	Normal,
+        DisplayName	=	Cage Trap,
+        Icon	=	TrapCage,
+        Trap    =   true,
+        MetalValue = 10,
+    }
+
+    item TrapMouse
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Mouse Trap,
+        Icon	=	Mousetrap,
+        Trap    =   true,
+        MetalValue = 2,
+    }
+
+    item TrapBox
+    {
+        Weight	=	1,
+        Type	=	Normal,
+        DisplayName	=	Trap Box,
+        Icon	=	TrapBox,
+        Trap    =   true,
+    }
+
+    item TrapCrate
+    {
+        Weight	=	1,
+        Type	=	Normal,
+        DisplayName	=	Trap Crate,
+        Icon	=	TrapCrate,
+        Trap    =   true,
+    }
+
+    item TrapStick
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Stick Trap,
+        Icon	=	TrapStick,
+        Trap    =   true,
+    }
+    /************************ Fishing ************************/
+    item FishingTackle
+    {
+        Type				=			Normal,
+        DisplayName			=		    Fishing Tackle,
+        Icon				=			FishingTackle,
+        Weight				=			0.1,
+        FishingLure         =           true,
+        Tooltip = Tooltip_FishingTackle,
+    }
+
+    item FishingTackle2
+    {
+        Type				=			Normal,
+        DisplayName			=		    Fishing Tackle,
+        Icon				=			FishingTackle2,
+        Weight				=			0.1,
+        FishingLure         =           true,
+        Tooltip = Tooltip_FishingTackle,
+    }
+
+     item WoodenLance
+    {
+        MaxRange	=	1.5,
+        WeaponSprite	=	Poolcue,
+        MinAngle	=	0.2,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Improvised;Blunt,
+        ConditionLowerChanceOneIn	=	1,
+        Weight	=	0.4,
+        SplatNumber	=	0,
+        PushBackMod	=	0.3,
+        MaxDamage	=	0.7,
+        SubCategory	=	Swinging,
+        ConditionMax	=	3,
+        MaxHitCount	=	2,
+        DoorDamage	=	2,
+        SwingAnim	=	Bat,
+        WeaponWeight	=	1,
+        DisplayName	=	Wooden Spear,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        MinDamage	=	0.5,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	StickSharpened,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   0,
+        TwoHandWeapon = TRUE,
+    }
+
+    item HammerStone
+    {
+        MaxRange	=	1,
+        WeaponSprite	=	Hammer,
+        MinAngle	=	0,
+        Type	=	Weapon,
+        MinimumSwingTime	=	3,
+        KnockBackOnNoDeath	=	TRUE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Blunt,
+        ConditionLowerChanceOneIn	=	5,
+        Weight	=	1.2,
+        SplatNumber	=	0,
+        PushBackMod	=	0.5,
+        MaxDamage	=	0.7,
+        SubCategory	=	Swinging,
+        ConditionMax	=	5,
+        MaxHitCount	=	1,
+        DoorDamage	=	2,
+        CanBarricade	=	TRUE,
+        SwingAnim	=	Bat,
+        WeaponWeight	=	1,
+        DisplayName	=	Stone Hammer,
+        MinRange	=	0.61,
+        SwingTime	=	3,
+        MinDamage	=	0.2,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	TRUE,
+        Icon	=	HammerStone,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_MetalSnap,
+        TreeDamage  =   1,
+    }
+
+    item CraftedFishingRod
+	{
+		MaxRange	=	1.5,
+		WeaponSprite	=	Poolcue,
+		MinAngle	=	0.2,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		KnockBackOnNoDeath	=	FALSE,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	Improvised;Blunt,
+		ConditionLowerChanceOneIn	=	1,
+		Weight	=	0.4,
+		SplatNumber	=	0,
+		PushBackMod	=	0.3,
+		MaxDamage	=	0.7,
+		SubCategory	=	Swinging,
+		ConditionMax	=	3,
+		MaxHitCount	=	2,
+		DoorDamage	=	2,
+		SwingAnim	=	Bat,
+		WeaponWeight	=	1,
+		DisplayName	=	Fishing Rod,
+		MinRange	=	0.61,
+		SwingTime	=	2,
+		MinDamage	=	0.5,
+		KnockdownMod	=	0,
+		SplatBloodOnNoDeath	=	FALSE,
+		Icon	=	FishingRod_crafted,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   0,
+	}
+
+	item CraftedFishingRodTwineLine
+    {
+        MaxRange	=	1.5,
+        WeaponSprite	=	Poolcue,
+        MinAngle	=	0.2,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Improvised;Blunt,
+        ConditionLowerChanceOneIn	=	1,
+        Weight	=	0.4,
+        SplatNumber	=	0,
+        PushBackMod	=	0.3,
+        MaxDamage	=	0.7,
+        SubCategory	=	Swinging,
+        ConditionMax	=	3,
+        MaxHitCount	=	2,
+        DoorDamage	=	2,
+        SwingAnim	=	Bat,
+        WeaponWeight	=	1,
+        DisplayName	=	Fishing Rod,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        MinDamage	=	0.5,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	FishingRod_crafted,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   0,
+    }
+
+	item FishingRod
+    {
+        MaxRange	=	1.5,
+        WeaponSprite	=	Poolcue,
+        MinAngle	=	0.2,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Improvised;Blunt,
+        ConditionLowerChanceOneIn	=	1,
+        Weight	=	0.4,
+        SplatNumber	=	0,
+        PushBackMod	=	0.3,
+        MaxDamage	=	0.7,
+        SubCategory	=	Swinging,
+        ConditionMax	=	3,
+        MaxHitCount	=	2,
+        DoorDamage	=	2,
+        SwingAnim	=	Bat,
+        WeaponWeight	=	1,
+        DisplayName	=	Fishing Rod,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        MinDamage	=	0.5,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	FishingRod,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   0,
+    }
+
+    item FishingRodBreak
+    {
+        MaxRange	=	1.5,
+        WeaponSprite	=	Poolcue,
+        MinAngle	=	0.2,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Improvised;Blunt,
+        ConditionLowerChanceOneIn	=	1,
+        Weight	=	0.4,
+        SplatNumber	=	0,
+        PushBackMod	=	0.3,
+        MaxDamage	=	0.7,
+        SubCategory	=	Swinging,
+        ConditionMax	=	3,
+        MaxHitCount	=	2,
+        DoorDamage	=	2,
+        SwingAnim	=	Bat,
+        WeaponWeight	=	1,
+        DisplayName	=	Fishing Rod Without line,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        MinDamage	=	0.5,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	FishingRodBreak,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   0,
+        Tooltip = Tooltip_BrokenRod,
+    }
+
+    item FishingRodTwineLine
+    {
+        MaxRange	=	1.5,
+        WeaponSprite	=	Poolcue,
+        MinAngle	=	0.2,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Improvised;Blunt,
+        ConditionLowerChanceOneIn	=	1,
+        Weight	=	0.4,
+        SplatNumber	=	0,
+        PushBackMod	=	0.3,
+        MaxDamage	=	0.7,
+        SubCategory	=	Swinging,
+        ConditionMax	=	3,
+        MaxHitCount	=	2,
+        DoorDamage	=	2,
+        SwingAnim	=	Bat,
+        WeaponWeight	=	1,
+        DisplayName	=	Fishing Rod,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        MinDamage	=	0.5,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	FishingRod,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   0,
+    }
+
+    item WoodenStick
+    {
+        Type = Normal,
+        DisplayName = Sturdy Stick,
+        Icon = TZ_WoodenStick,
+        Weight = 0.1,
+    }
+
+    item FireWoodKit
+    {
+        Type = Normal,
+        DisplayName = Kindling,
+        Icon = TZ_AntiquatedLighter,
+        Weight = 0.5,
+		OBSOLETE = true
+    }
+
+    item PercedWood
+    {
+        Type = Normal,
+        DisplayName = Notched Wooden Plank,
+        Icon = TZ_PerforatedWoodenPlank,
+        Weight = 0.5,
+    }
+
+    item FishingLine
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.1,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Fishing Line,
+        Icon				=			FishingLine,
+        Weight				=			0.1,
+    }
+
+    item Catfish
+    {
+        Type				=			Food,
+        DisplayName			=		    Catfish,
+        Icon				=			FishCatfish,
+        Weight				=			0.4,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 28,
+        Lipids = 5.7,
+        Calories = 181,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Bass
+    {
+        Type				=			Food,
+        DisplayName			=		    Bass,
+        Icon				=			FishBass,
+        Weight				=			1.1,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 30,
+        Lipids = 4.2,
+        Calories = 184,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Perch
+    {
+        Type				=			Food,
+        DisplayName			=		    Perch,
+        Icon				=			FishPerch,
+        Weight				=			0.4,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 12.2,
+        Lipids = 4.2,
+        Calories = 111,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Crappie
+    {
+        Type				=			Food,
+        DisplayName			=		    Crappie Fish,
+        Icon				=			FishCrappie,
+        Weight				=			0.4,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 12.2,
+        Lipids = 4.2,
+        Calories = 111,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Panfish
+    {
+        Type				=			Food,
+        DisplayName			=		    Sunfish,
+        Icon				=			FishPanfish,
+        Weight				=			0.4,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 12.2,
+        Lipids = 4.2,
+        Calories = 11,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Pike
+    {
+        Type				=			Food,
+        DisplayName			=		    Pike,
+        Icon				=			FishPike,
+        Weight				=			0.4,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 38.13,
+        Lipids = 5.37,
+        Calories = 207,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Trout
+    {
+        Type				=			Food,
+        DisplayName			=		    Trout,
+        Icon				=			FishTrout,
+        Weight				=			0.4,
+        HungerChange 		=		    -15,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 5,
+        Proteins = 32.56,
+        Lipids = 5.5,
+        Calories = 219,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item BaitFish
+    {
+        Type				=			Food,
+        DisplayName			=		    Little Bait Fish,
+        Icon				=			FishMinnow,
+        Weight				=			0.1,
+        HungerChange 		=		    -5,
+        DaysFresh 			=		    4,
+        DaysTotallyRotten 	=	 	    8,
+        FishingLure         =           true,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 0,
+        Proteins = 8.52,
+        Lipids = 1.5,
+        Calories = 30,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item FishingNet
+    {
+        Type = Normal,
+        DisplayName = Fishing Net Trap,
+        Icon = FishTrap,
+        Weight = 0.5,
+    }
+
+    item BrokenFishingNet
+    {
+        Type = Normal,
+        DisplayName = Broken Fishing Net Trap,
+        Icon = FishTrapBroken,
+        Weight = 0.4,
+    }
+
+    /************************ Weapon Upgrades ************************/
+
+    item IronSight
+    {
+        Type = WeaponPart,
+        DisplayName = Iron Sight,
+        Icon = ScopeIronSight,
+        Weight = 0.1,
+        WeightModifier = 0.1,
+        MaxRangeModifier = 3,
+        MountOn = HuntingRifle; VarmintRifle; Pistol,
+        PartType = Scope,
+        Tooltip = Tooltip_IronSight,
+        MetalValue = 15,
+    }
+
+    item x2Scope
+    {
+        Type = WeaponPart,
+        DisplayName = x2 Scope,
+        Icon = Scope2x,
+        Weight = 0.3,
+        WeightModifier = 0.3,
+        MaxRangeModifier = 7,
+        MinRangeModifier = 6,
+        MountOn = HuntingRifle; VarmintRifle,
+        PartType = Scope,
+        Tooltip = Tooltip_Scope,
+        MetalValue = 22,
+    }
+
+    item x4Scope
+    {
+        Type = WeaponPart,
+        DisplayName = x4 Scope,
+        Icon = Scope4x,
+        Weight = 0.4,
+        WeightModifier = 0.4,
+        MaxRangeModifier = 13,
+        MinRangeModifier = 8,
+        MountOn = HuntingRifle; VarmintRifle,
+        PartType = Scope,
+        Tooltip = Tooltip_Scope,
+        MetalValue = 22,
+    }
+
+    item x8Scope
+    {
+        Type = WeaponPart,
+        DisplayName = x8 Scope,
+        Icon = Scope8x,
+        Weight = 0.8,
+        WeightModifier = 0.8,
+        MaxRangeModifier = 20,
+        MinRangeModifier = 10,
+        MountOn = HuntingRifle; VarmintRifle,
+        PartType = Scope,
+        Tooltip = Tooltip_Scope,
+        MetalValue = 22,
+    }
+
+    item AmmoStraps
+    {
+        Type = WeaponPart,
+        DisplayName = Ammo Straps,
+        Icon = AmmoStrap,
+        Weight = 0.5,
+        WeightModifier = 0.5,
+        ReloadTimeModifier = -5,
+        MountOn = HuntingRifle; VarmintRifle; Shotgun,
+        PartType = Sling,
+        Tooltip = Tooltip_AmmoStrap,
+    }
+
+    item Sling
+    {
+        Type = WeaponPart,
+        DisplayName = Sling,
+        Icon = GunSling,
+        Weight = 0.5,
+        WeightModifier = -0.3,
+        MountOn = HuntingRifle; VarmintRifle; Shotgun,
+        PartType = Sling,
+        Tooltip = Tooltip_Sling,
+    }
+
+    item FiberglassStock
+    {
+        Type = WeaponPart,
+        DisplayName = Fiberglass Stock,
+        Icon = RifleFibreglassStock,
+        Weight = 1,
+        WeightModifier = -0.5,
+        HitChanceModifier = 8,
+        MountOn = HuntingRifle; VarmintRifle,
+        PartType = Stock,
+        Tooltip = Tooltip_FiberglassStock,
+    }
+
+    item RecoilPad
+    {
+        Type = WeaponPart,
+        DisplayName = Recoil Pad,
+        Icon = RifleRecoilPad,
+        Weight = 0.1,
+        WeightModifier = 0.1,
+        RecoilDelayModifier = -10.0,
+        MountOn = HuntingRifle; VarmintRifle,
+        PartType = RecoilPad,
+        Tooltip = Tooltip_RecoilPad,
+    }
+
+    item Laser
+    {
+        Type = WeaponPart,
+        DisplayName = Laser,
+        Icon = HandgunLaser,
+        Weight = 0.2,
+        WeightModifier = 0.2,
+        HitChanceModifier = 5,
+        MountOn = Pistol,
+        PartType = Canon,
+        Tooltip = Tooltip_Laser,
+        MetalValue = 15,
+    }
+
+    item RedDot
+    {
+        Type = WeaponPart,
+        DisplayName = Red Dot,
+        Icon = RedDot,
+        Weight = 0.2,
+        WeightModifier = 0.2,
+        AimingTimeModifier = 5,
+        MountOn = Pistol,
+        PartType = Scope,
+        Tooltip = Tooltip_RedDot,
+        MetalValue = 15,
+    }
+
+    item ChokeTubeFull
+    {
+        Type = WeaponPart,
+        DisplayName = Choke Tube Full,
+        Icon = ShotgunChoke,
+        Weight = 0.1,
+        WeightModifier = 0.1,
+        AngleModifier = 0.1,
+        DamageModifier = 0.5,
+        MountOn = Shotgun,
+        PartType = Canon,
+        Tooltip = Tooltip_ChokeTubeFull,
+        MetalValue = 12,
+    }
+
+    item ChokeTubeImproved
+    {
+        Type = WeaponPart,
+        DisplayName = Choke Tube Improved,
+        Icon = ShotgunChoke,
+        Weight = 0.1,
+        WeightModifier = 0.1,
+        AngleModifier = -0.1,
+        DamageModifier = -0.5,
+        MountOn = Shotgun,
+        PartType = Canon,
+        Tooltip = Tooltip_ChokeTubeImproved,
+        MetalValue = 12,
+    }
+
+    /************************ Canning food ************************/
+
+    item EmptyJar
+	{
+		Type				=		Normal,
+		DisplayName			=		Empty Jar,
+		Icon				=		JarEmpty2,
+		Weight				=		0.2,
+		Tooltip = Tooltip_Jar,
+	}
+
+	item JarLid
+    {
+        Type				=		Normal,
+        DisplayName			=		Jar Lid,
+        Icon				=		JarLid,
+        Weight				=		0.1,
+        MetalValue = 10,
+    }
+
+	item Vinegar
+    {
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.1,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Vinegar,
+        Icon				=			Vinegar,
+        Weight				=			0.3,
+    }
+
+    item CannedTomato
+	{
+		Type				=		Food,
+		DisplayName			=		Jar of Tomatoes,
+		Icon				=		JarBrown,
+		Weight				=		0.5,
+		DaysFresh 			=		60,
+		DaysTotallyRotten 	=	 	90,
+		OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+	}
+
+	item CannedCarrots
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Carrots,
+        Icon				=		JarBrown,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+        IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+	item CannedPotato
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Potatoes,
+        Icon				=		JarWhite,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+	item CannedEggplant
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Eggplants,
+        Icon				=		JamPurple,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+	item CannedLeek
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Leeks,
+        Icon				=		JarWhite,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+	item CannedRedRadish
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Red Radishes,
+        Icon				=		JarBrown,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+	item CannedBellPepper
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Bell Peppers,
+        Icon				=		JarBrown,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+	item CannedCabbage
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Cabbage,
+        Icon				=		JarGreen,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+    item CannedBroccoli
+    {
+        Type				=		Food,
+        DisplayName			=		Jar of Broccoli,
+        Icon				=		JarGreen,
+        Weight				=		0.5,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+        OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+    }
+
+    /************************ Keys ************************/
+
+    item Key1
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Key,
+		Icon	=	Key1,
+		MetalValue = 5,
+	}
+
+	item Key2
+    {
+        Weight	=	0,
+        Type	=	Key,
+        DisplayName	=	Key,
+        Icon	=	Key2,
+        MetalValue = 5,
+    }
+
+    item Key3
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Key,
+		Icon	=	Key3,
+		MetalValue = 5,
+	}
+
+    item Key4
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Key,
+		Icon	=	Key4,
+		MetalValue = 5,
+	}
+
+    item Key5
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Key,
+		Icon	=	Key5,
+		MetalValue = 5,
+	}
+
+    item CombinationPadlock
+	{
+		Weight	=	0.2,
+		Type	=	Key,
+		DisplayName	=	Combination Padlock,
+		Icon	=	PadlockDigital,
+        DigitalPadlock =   TRUE,
+        MetalValue = 15,
+        Tooltip = Tooltip_Padlock,
+	}
+
+    item Padlock
+	{
+		Weight	=	0.2,
+		Type	=	Key,
+		DisplayName	=	Padlock,
+		Icon	=	Padlock,
+        Padlock =   TRUE,
+        MetalValue = 15,
+        Tooltip = Tooltip_Padlock,
+	}
+
+    item KeyPadlock
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Key,
+		Icon	=	KeyPadlock1,
+		MetalValue = 5,
+	}
+
+	item KeyRing
+    {
+        Weight	=	0,
+        Type	=	Container,
+        DisplayName	=	Key Ring,
+        Icon	=	KeyRing,
+        Capacity	=	1,
+        OnlyAcceptCategory = Key,
+        MetalValue = 5,
+    }
+
+    /************************ Traps ************************/
+
+    item Aerosolbomb
+	{
+		MaxRange	=	10,
+		KnockdownMod	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Aerosol Bomb,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	Aerosolbomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	Aerosolbomb,
+		ExplosionPower  =   70,
+		ExplosionRange  =   6,
+		triggerExplosionTimer   =   50,
+		ExplosionSound  =   smallExplosion,
+		PlacedSprite = constructedobjects_01_32,
+		Tooltip = Tooltip_Trap,
+	}
+
+    item AerosolbombTriggered
+	{
+		MaxRange	=	10,
+		KnockdownMod	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Aerosol Bomb with Timer,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	Aerosolbomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	AerosolbombTimer,
+		ExplosionPower  =   70,
+		ExplosionRange  =   6,
+		ExplosionTimer = 10,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   smallExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item AerosolbombSensorV1
+	{
+		MaxRange	=	10,
+		KnockdownMod	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Aerosol Bomb with Sensor,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	Aerosolbomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	AerosolbombTimer,
+		ExplosionPower  =   70,
+		ExplosionRange  =   6,
+		ExplosionTimer = 5,
+		SensorRange =   3,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   smallExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item AerosolbombSensorV2
+	{
+		MaxRange	=	10,
+		KnockdownMod	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Aerosol Bomb with Sensor,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	Aerosolbomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	AerosolbombTimer,
+		ExplosionPower  =   70,
+		ExplosionRange  =   6,
+		ExplosionTimer = 5,
+		SensorRange =   4,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   smallExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item AerosolbombSensorV3
+	{
+		MaxRange	=	10,
+		KnockdownMod	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Aerosol Bomb with Sensor,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	Aerosolbomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	AerosolbombTimer,
+		ExplosionPower  =   70,
+		ExplosionRange  =   6,
+		ExplosionTimer = 5,
+		SensorRange =   6,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   smallExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item AerosolbombRemote
+	{
+		MaxRange	=	10,
+		KnockdownMod	=	0,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Remote Aerosol Bomb,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	Aerosolbomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	AerosolbombTimer,
+		ExplosionPower  =   70,
+		ExplosionRange  =   6,
+		CanBePlaced = TRUE,
+		CanBeRemote = TRUE,
+        ExplosionSound  =   smallExplosion,
+        PlacedSprite = constructedobjects_01_32,
+	}
+
+	item FlameTrap
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Flame Trap,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Molotov,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	BottleWithGas,
+        FirePower  =   97,
+        FireRange  =   6,
+        ExplosionSound  =   smallExplosion,
+        Tooltip = Tooltip_Trap,
+    }
+
+    item FlameTrapTriggered
+    {
+        MaxRange	=	3,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Flame Trap with Timer,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	constructedobjects_01_32,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	FireBomb,
+        ExplosionTimer = 10,
+        PlacedSprite = constructedobjects_01_32,
+        FirePower  =   97,
+        FireRange  =   6,
+        CanBePlaced = TRUE,
+        ExplosionSound  =   smallExplosion,
+    }
+
+    item FlameTrapSensorV1
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Flame Trap with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Molotov,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	FireBomb,
+        SensorRange =   3,
+        PlacedSprite = constructedobjects_01_32,
+        ExplosionTimer  =   5,
+        FirePower  =   97,
+        FireRange  =   6,
+        CanBePlaced = TRUE,
+        ExplosionSound  =   smallExplosion,
+    }
+
+    item FlameTrapSensorV2
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Flame Trap with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Molotov,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	FireBomb,
+        SensorRange =   4,
+        PlacedSprite = constructedobjects_01_32,
+        ExplosionTimer  =   5,
+        FirePower  =   97,
+        FireRange  =   6,
+        CanBePlaced = TRUE,
+        ExplosionSound  =   smallExplosion,
+    }
+
+    item FlameTrapSensorV3
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Flame Trap with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Molotov,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	FireBomb,
+        SensorRange =   5,
+        PlacedSprite = constructedobjects_01_32,
+        ExplosionTimer  =   5,
+        FirePower  =   97,
+        FireRange  =   6,
+        CanBePlaced = TRUE,
+        ExplosionSound  =   smallExplosion,
+    }
+
+    item FlameTrapRemote
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Remote Flame Trap,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Molotov,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	FireBomb,
+        PlacedSprite = constructedobjects_01_32,
+        FirePower  =   97,
+        FireRange  =   6,
+        CanBePlaced = TRUE,
+        CanBeRemote = TRUE,
+        ExplosionSound  =   smallExplosion,
+    }
+
+	item SmokeBomb
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Smoke Bomb,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	Smokebomb,
+        TriggerExplosionTimer   =   50,
+        SmokeRange  =   5,
+        CanBePlaced = TRUE,
+        PlacedSprite = constructedobjects_01_36,
+        Tooltip = Tooltip_Trap,
+    }
+
+	item SmokeBombRemote
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Remote Smoke Bomb,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	SmokebombTimer,
+        SmokeRange  =   5,
+        CanBePlaced = TRUE,
+        CanBeRemote = TRUE,
+        PlacedSprite = constructedobjects_01_36,
+    }
+
+	item SmokeBombSensorV1
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Smoke Bomb with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        SensorRange =   3,
+        Icon	=	SmokebombTimer,
+        SmokeRange  =   5,
+        ExplosionTimer  =   5,
+        CanBePlaced = TRUE,
+        PlacedSprite = constructedobjects_01_36,
+    }
+
+	item SmokeBombSensorV2
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Smoke Bomb with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        SensorRange =   4,
+        Icon	=	SmokebombTimer,
+        SmokeRange  =   5,
+        ExplosionTimer  =   5,
+        CanBePlaced = TRUE,
+        PlacedSprite = constructedobjects_01_36,
+    }
+
+	item SmokeBombSensorV3
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Smoke Bomb with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        SensorRange =   5,
+        Icon	=	SmokebombTimer,
+        SmokeRange  =   5,
+        ExplosionTimer  =   5,
+        CanBePlaced = TRUE,
+        PlacedSprite = constructedobjects_01_36,
+    }
+
+	item SmokeBombTriggered
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Smoke Bomb with Timer,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	ExplosiveTrap,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	SmokebombTimer,
+        ExplosionTimer  =   10,
+        SmokeRange  =   5,
+        CanBePlaced = TRUE,
+        PlacedSprite = constructedobjects_01_36,
+    }
+
+    item NoiseTrap
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Noise Maker,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseMaker,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   17,
+        triggerExplosionTimer   =   50,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        ExplosionSound  =   feedback,
+        Tooltip = Tooltip_Trap,
+    }
+
+    item NoiseTrapTriggered
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Noise Generator with Timer,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   17,
+        ExplosionTimer  =   10,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        ExplosionSound  =   feedback,
+    }
+
+    item NoiseTrapSensorV1
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Noise Generator with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   17,
+        ExplosionTimer  =   10,
+        SensorRange =   3,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        ExplosionSound  =   feedback,
+    }
+
+    item NoiseTrapSensorV2
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Noise Generator with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   17,
+        ExplosionTimer  =   10,
+        SensorRange =   4,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        ExplosionSound  =   feedback,
+    }
+
+    item NoiseTrapSensorV3
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Noise Generator with Sensor,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   17,
+        ExplosionTimer  =   10,
+        SensorRange =   6,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        ExplosionSound  =   feedback,
+    }
+
+    item NoiseTrapRemote
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Remote Noise Generator,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	NoiseMaker,
+        NoiseRange  =   17,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        CanBeRemote = TRUE,
+        ExplosionSound  =   feedback,
+    }
+
+    item Football2
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Football,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	Football,
+        MinDamage	=	0,
+        Weight	=	1.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	Football,
+        TriggerExplosionTimer   =   40,
+        ExtraDamage  =   0.001,
+        ExplosionRange  =   2,
+    }
+
+    item AlarmClock2
+    {
+        Type	=	AlarmClock,
+        DisplayName	=	Alarm Clock,
+        Weight	=	0.5,
+        Icon	=	AlarmClock,
+        AlarmSound = alarmClockLooped,
+        SoundRadius = 50,
+        MetalValue = 25,
+    }
+
+    item AlarmClock
+    {
+        MaxRange	=	10,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1.5,
+        SwingAnim	=	Bat,
+        UseSelf	=	TRUE,
+        DisplayName	=	Alarm Clock,
+        SwingTime	=	1.5,
+        SwingAmountBeforeImpact	=	0.1,
+        PhysicsObject	=	NoiseGenerator,
+        MinDamage	=	0,
+        Weight	=	0.5,
+        MaxDamage	=	0,
+        MaxHitCount	=	0,
+        Icon	=	AlarmClock,
+        NoiseRange  =   10,
+        ExplosionTimer  =   10,
+        CanBePlaced = TRUE,
+        CanBeReused =   TRUE,
+        CountDownSound = ticking,
+        ExplosionSound  =   alarmClockNoTicking,
+        Tooltip = Tooltip_Trap,
+        MetalValue = 25,
+        OBSOLETE = true
+    }
+
+    item PipeBomb
+	{
+		MaxRange	=	10,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Pipe Bomb,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	PipeBomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	PipeBomb,
+		ExplosionPower  =   90,
+		ExplosionRange  =   7,
+		ExplosionSound  =   bigExplosion,
+		PlacedSprite = constructedobjects_01_32,
+		Tooltip = Tooltip_Trap,
+	}
+
+    item PipeBombTriggered
+	{
+		MaxRange	=	10,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Pipe Bomb with Timer,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	PipeBomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	PipeBombTimer,
+		ExplosionPower  =   90,
+		ExplosionRange  =   7,
+		ExplosionTimer = 10,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   bigExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item PipeBombSensorV1
+	{
+		MaxRange	=	10,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Pipe Bomb with Sensor,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	PipeBomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	PipeBombTimer,
+		ExplosionPower  =   90,
+		ExplosionRange  =   7,
+		ExplosionTimer = 5,
+		SensorRange =   3,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   bigExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item PipeBombSensorV2
+	{
+		MaxRange	=	10,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Pipe Bomb with Sensor,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	PipeBomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	PipeBombTimer,
+		ExplosionPower  =   90,
+		ExplosionRange  =   7,
+		ExplosionTimer = 5,
+		SensorRange =   4,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   bigExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item PipeBombSensorV3
+	{
+		MaxRange	=	10,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Pipe Bomb with Sensor,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	PipeBomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	PipeBombTimer,
+		ExplosionPower  =   90,
+		ExplosionRange  =   7,
+		ExplosionTimer = 5,
+		SensorRange =   6,
+		CanBePlaced = TRUE,
+		ExplosionSound  =   bigExplosion,
+		PlacedSprite = constructedobjects_01_32,
+	}
+
+    item PipeBombRemote
+	{
+		MaxRange	=	10,
+		Type	=	Weapon,
+		MinimumSwingTime	=	1.5,
+		SwingAnim	=	Bat,
+		UseSelf	=	TRUE,
+		DisplayName	=	Remote Pipe Bomb,
+		SwingTime	=	1.5,
+		SwingAmountBeforeImpact	=	0.1,
+		PhysicsObject	=	PipeBomb,
+		MinDamage	=	0,
+		Weight	=	1.5,
+		MaxDamage	=	0,
+		MaxHitCount	=	0,
+		Icon	=	PipeBombTimer,
+		ExplosionPower  =   90,
+		ExplosionRange  =   7,
+		CanBePlaced = TRUE,
+		CanBeRemote = TRUE,
+        ExplosionSound  =   bigExplosion,
+        PlacedSprite = constructedobjects_01_32,
+	}
+
+    /************************ Blacksmith ************************/
+
+    item IronIngot
+    {
+        Weight = 5,
+        Type = Drainable,
+        DisplayName	= Workable Iron,
+        Icon = MetalBits,
+        UseDelta = 0.01,
+        UseWhileEquipped = FALSE,
+    }
+
+    item MetalPipe
+    {
+        Weight = 1,
+        Type = Normal,
+        DisplayName	= Metal Tube,
+        Icon = MetalTube,
+        MetalValue = 30,
+    }
+
+    item MetalBar
+    {
+        Weight = 1.5,
+        Type = Normal,
+        DisplayName	= Metal Bar,
+        Icon = MetalBar,
+        MetalValue = 40,
+    }
+
+    item SmallSheetMetal
+    {
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	Small Metal Sheet,
+        Icon	=	MetalSheetSmall,
+        MetalValue = 20,
+    }
+
+    item WeldingMask
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Welding Mask,
+        Icon	=	WeldingMask,
+        MetalValue = 10,
+    }
+
+    item TinCanEmpty
+    {
+        Weight = 0.2,
+        Type = Normal,
+        DisplayName	= Empty Tin Can,
+        Icon = TinCanEmpty,
+        MetalValue = 20,
+    }
+
+    item BallPeenHammer
+    {
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName	= Ball Peen Hammer,
+        Icon = BallPeenHammer,
+        MetalValue = 20,
+    }
+
+    item Tongs
+    {
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName	= Tongs,
+        Icon = BlacksmithTongs,
+        MetalValue = 15,
+    }
+
+    item 9mmBulletsMold
+    {
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName	= 9mm Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+    }
+
+    item ShotgunShellsMold
+    {
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName	= Shotgun Shells Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+    }
+
+    item 308BulletsMold
+    {
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName	= 308 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+    }
+
+    item 223BulletsMold
+    {
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName	= 223 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+    }
+
+    item BlowTorch
+    {
+        Weight	=	0.3,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.01,
+        DisplayName	=	Propane Torch,
+        Icon	=	BlowTorch,
+        MetalValue = 20,
+        KeepOnDeplete = true,
+    }
+
+    item WeldingRods
+    {
+        Weight	=	0.3,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.05,
+        DisplayName	=	Welding Rods,
+        Icon	=	WeldingRods,
+        MetalValue = 20,
+    }
+
+    item Bellows
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Bellows,
+        Icon	=	Bellows,
+        Tooltip = Tooltip_Bellows,
+    }
+
+    item Handle
+    {
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Handle,
+        Icon	=	WoodHandle,
+    }
+
+    item MetalDrum
+    {
+        Weight	=	2,
+        Type	=	Normal,
+        DisplayName	=	Metal Drum,
+        Icon	=	BarrellDrum,
+        MetalValue = 40,
+    }
+
+    item PaintbucketEmpty
+    {
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Empty Paint Bucket,
+        Icon	=	PaintbucketEmpty,
+        MetalValue = 20,
+    }
+
+    item PopEmpty
+    {
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Pop Can,
+        Icon	=	PopEmpty,
+        MetalValue = 10,
+    }
+}
+
