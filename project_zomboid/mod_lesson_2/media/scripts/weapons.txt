@@ -1,0 +1,43 @@
+module cppProstoMod
+{
+  imports {Base,}
+  
+  item AdminAxe
+  {
+    MaxRange                  = 15,
+    WeaponSprite              = Fireaxe,
+    MinAngle                  = 0.2,
+    Type                      = Weapon,
+    MinimumSwingTime          = 3.0,
+    KnockBackOnNoDeath        = TRUE,
+    SwingAmountBeforeImpact   = 0.002,
+    Categories                = Axe,
+    ConditionLowerChanceOneIn = 30,
+    Weight                    = 3,
+    SplatNumber               = 1,
+    PushBackMod               = 0.3,
+    MinDamage                 = 200,
+    MaxDamage                 = 300,
+    SubCategory               = Swinging,
+    ConditionMax              = 15,
+    MaxHitCount               = 10,
+    DoorDamage                = 200,
+    IdleAnim                  = Idle_Weapon2,
+    SwingAnim                 = Bat,
+    CriticalChance            = 20,
+    WeaponWeight              = 3,
+    DisplayName               = Admin Axe,
+    MinRange                  = 0.61,
+    SwingTime                 = 1.0,
+    HitAngleMod               = -30,
+    SplatSize                 = 5,
+    KnockdownMod              = 2,
+    SplatBloodOnNoDeath       = TRUE,
+    Icon                      = mega_axe,
+    RunAnim                   = Run_Weapon2,
+    TwoHandWeapon             = TRUE,
+    BreakSound                = PZ_WoodSnap,
+    TreeDamage                = 50,
+    MetalValue                = 120,
+  }
+}
