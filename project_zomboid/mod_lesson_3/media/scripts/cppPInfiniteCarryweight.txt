@@ -1,0 +1,16 @@
+module cppProstoMod
+{
+  imports
+  {
+    Base
+  }
+  
+  /************************ITEMS************************/
+  item cppPInfiniteCarryweight
+  {
+    Weight      = -999999,
+    Type        = Normal,
+    DisplayName = |Infinite Carryweight|,
+  }
+
+}

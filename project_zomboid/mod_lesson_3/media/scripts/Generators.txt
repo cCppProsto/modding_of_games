@@ -1,0 +1,29 @@
+module cppProstoMod
+{
+  imports {Base,}
+  
+  item AdminGenerator
+  {
+    Weight          = 1,
+    Type            = Normal,
+    DisplayName     = Admin Generator,
+    Icon            = admin_generator,
+    ResizeWorldIcon = 1.0,
+  }
+  
+  recipe Plugin Admin Generator
+  {
+	  SkillRequired:Electricity=1,
+    AdminGenerator,
+    keep AdminAxe,
+    NeedToBeLearn:false,
+	  CanBeDoneFromFloor:true,
+    Result:AdminAxe,
+    Time:50,
+    Category:Electrical,
+    OnCreate:cppProstoSetAdminGen,
+    RemoveResultItem:true,
+  }
+}
+
+
