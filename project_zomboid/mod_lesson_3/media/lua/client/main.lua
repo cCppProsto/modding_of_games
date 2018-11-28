@@ -1,3 +1,5 @@
+-- https://projectzomboid.com/modding/zombie/iso/objects/IsoGenerator.html
+
 -- tail -f file | grep --line-buffered my_pattern
 -- https://theindiestone.com/forums/index.php?/topic/61-robomats-modding-tutorials-updated-12112013/
 -- http://pzwiki.net/wiki/Modding:Lua_Event
@@ -36,12 +38,12 @@
 -- n            add PetrolCan           |
 -- m            add PropaneTank         |
 -- ,            add Chocolate           |
--- .            
--- /
+-- .                           
+-- /            
 -- f            add AdminAxe            | 
 -- g  -         add Admin Generator     |     enable/disable ghost mode
--- k
--- l
+-- k            add Auger               |
+-- l            add Wooden Ladder       |
 -- ;
 -- '
 -- e
@@ -122,6 +124,14 @@ function cppProstoMain:enableDisableGhostMode()
     self.player:Say("Ghost mode enabled");
   end 
 end
+--------------------- Add Auger  to inventory ---------------------------
+function cppProstoMain:addAuger()
+  self.player_inv:AddItem("Hydrocraft.HCAuger");
+end
+--------------------- Add Wooden ladder to inventory --------------------
+function cppProstoMain:addWoodenladder()
+  self.player_inv:AddItem("Hydrocraft.HCWoodenladder");
+end
 --------------------- Add axe to inventory -----------------------------
 function cppProstoMain:addAxe()
   self.player_inv:AddItem("Base.Axe");
@@ -180,6 +190,8 @@ function cppProstoMain:LeftShiftKeyProcessing( keyCode )
   elseif keyCode == 51 then self:addChocolate();            -- ,
   elseif keyCode == 33 then self:addAdminAxe();             -- F
   elseif keyCode == 34 then self:addAdminGenerator();       -- G
+  elseif keyCode == 37 then self:addAuger();                -- K
+  elseif keyCode == 38 then self:addWoodenladder();         -- L
   end
 end
 --------------------- Actiond For Key With Left Shift Holding ----------

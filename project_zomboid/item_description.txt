@@ -1,0 +1,404 @@
+https://theindiestone.com/forums/index.php?/topic/15188-item-and-recipe-script-variables-brief-description/
+
+Предметы
+
+Type = Normal,
+  В мире Project Zomboid существуют различные типы предметов, далее идет краткое описание каждого из типов
+
+  Normal     – Обычный предмет(Без каких-то особенностей, например - игла, нить, пуля и т.д.).
+  Drainable  – Предмет который имеет определенное количество использований, до его уничтожения(батарейка, краска, уголь и т.д.).
+  Food       – Предмет который может быть употреблен персонажем(яблоко, джем и т.д.)
+  Weapon     – Предмет который может быть использован как оружие, должно быть в руках (топор, нож и т.д.)
+  Container  – Предмет который может хранить другие предметы внутри(кошелек, сумка и т.д.)
+  Clothing   – Предмет одеваемый персонажем(жилет, шорты и т.д.)
+  Literature – Предмет который может быть прочитан(книга, журнал и т.д.)
+
+
+Weight = 1,
+  Вес предмета, видимый в игре, значение должно быть суммой веса и размера предмета.Обычно используется для всех типов предметов.
+ 
+DisplayName = Топор,
+  Имя предмета отображаемое в игре. Обычно используется для всех типов предметов.
+
+Icon = my_axe,
+  Имя картинки предмета, которая будет отображаться в игре, этот .png файл иконки должен находить
+  в директории мода в media/textures и имя должно начинаться с Item_, например Item_my_axe.png 
+  Обычно используется для всех типов предметов.
+ 
+UseDelta = 0.1,
+  Определяет количество использований предмета который имеет тип Drainable, к примеру если значение 0.1 то 
+  этот предмет можно использовать 10 раз до его уничтожения, если 0.01 то до уничтожения 100 использований.
+  Обычно используется для предметов типа Drainable.
+ 
+Capacity = 20,
+  Определяет максимальную грузоподьемность предмета, тип которого Container
+  Обычно используется для предметов типа Container.
+ 
+CanBeEquipped = Back,
+  Определяет слот для одежды, в который будет помещен предмет.
+  Используется только для предметов типа Container
+ 
+BodyLocation = Bottoms,
+  Определяет часть тела на которую одет предмет типа Clothing. 
+  Может быть - Bottoms, Shoes, Top
+ 
+Temperature = 8,
+  Определяет сопротивление температуре, который дает предмет при ношении.
+  Используется только для предметов типа Clothing
+ 
+CanStoreWater = TRUE/FALSE,
+  Определяет может ли предмет использоваться для хранения воды. По умолчанию установлено в FALSE.
+  Обычно используется для предметов типа Drainable и Normal.
+ 
+IsWaterSource = TRUE/FALSE,
+  Определяет является ли или нет, предмет источником воды. По умолчанию установлено в FALSE.
+  Обычно используется для предметов типа Drainable.
+
+UseWhileEquipped = TRUE/FALSE,
+  Определяет должен ли предмет быть одетым для его использования. По умолчанию установлено в FALSE.
+  Обычно используется для предметов типа Drainable.
+
+ReplaceOnDeplete = Module.ItemID,
+  Когда предмет исчерпан(к примеру выпили воду из бутылки или съели чипсы) этот предмет может быть заменен указанным, нужно указать, 
+  к примеру после полной бутылки воды мы получаем бустую бутылку, или после чипсов, упаковку от чипсов
+ 
+ReplaceOnUseOn = WaterSource-WaterBottleFull,
+  Если к предмет используется на чем-то, то он во что-то превращается,
+  к примеру если бутылку использовать на источнике воды(WaterSource) то она превратится в полную бутылку (WaterBottleFull)
+ 
+IsCookable = TRUE,
+  Определяет можно ли приготовить предмет на огде, в печи или барбекю.
+  Если предмет может быть приготовлен и он хранит воду, он может быть использован для того чтобы
+  закипятить эту воду или очистить ее.
+  По умолчанию установлено в FALSE.
+ 
+DangerousUncooked = TRUE,
+  Если установлено в TRUE то употребление этого предмета(еды) без приготовление чревато отравлением.
+ 
+HungerChange = -20,
+  Определяет на сколько значение величины голода уменьшится, если значение  положительное то это сделает игрока еще более голодным.
+ 
+ThirstChange = -20,
+  Определяет на сколько значение величины жажды уменьшится, если значение  положительное то это сделает игрока еще более жаждущим пить.
+ 
+StressChange = -20,
+  Определяет на сколько значение величины стресса уменьшится, если значение положительное то это увеличит величину стресса.
+
+UnhappyChange = -20,
+  Определяет на сколько значение величины счастья уменьшится, если значение положительное то это увеличит величину несчастья.
+
+BoredomChange = -20,
+  Определяет на сколько значение величины скуки уменьшится, если значение положительное то это увеличит величину скуки.
+ 
+FatigueChange = -20,
+  Определяет на сколько значение величины усталости уменьшится, если значение положительное то это увеличит величину усталости.
+
+EnduranceChange = 20,
+  Определяет на сколько величина усталости уменьшится, если значение отрицательное персонаж станет более уставшим.
+ 
+Alcoholic = TRUE,
+  Если TRUE то употребление предмета вызовет опьянение. 
+  Если использовать как бинт, будет действовать как дезинфицирующее средство.
+ 
+DaysFresh = 6,
+  Определяет количество дней, до того как еда начнет гнить.
+ 
+DaysTotallyRotten = 10,
+  Определяет количество дней то того как еда полностью сгниет, становится ядовитой.
+ 
+MinutesToCook = 40,
+  Количество игровых минут перед тем как приготовление еды завершится, используется с Cookable = TRUE
+ 
+MinutesToBurn = 110,
+  Количество игровых минут перед тем как предмет будет сожжен во время готовки.
+ 
+Poison = TRUE,
+  Определяет является ли предмет ядовитым при употреблении
+ 
+PoisonDetectionLevel = 1,
+  Неизвестно, вероятно определяет сложность определения яда если используется в Evolved рецепте.
+ 
+PoisonPower = 5,
+  Определяет силу яда, чем выше значение тем предмет смертоноснее при употреблении
+ 
+UseForPoison = 1,
+  Неизвестно, возможно количество PoisonPower переходит в Evolved Recipes.
+ 
+FoodType    =   Fruits,
+  Тип еды, Fruits - фрукт, Meat - мясо, и т.д.
+ 
+AlwaysWelcomeGift = true,
+  Неизвестно
+ 
+CustomContextMenu   =   Take,
+  Текст который будет перезаписан этим значением, вместо слова "Eat" для предметов типа Еда. (Для сигатет - курить, для вина выпить, и т.д.)
+ 
+EvolvedRecipe = Stew:3;Pie:3;Soup:3;Sandwich:3;Salad:3;Roasted Vegetables:3,
+  Предмет может быть использован в Evolved рецептах, в примере выше он может быть использован в стейке, пироге, супе и т.д.
+ 
+DisplayCategory = Ammo,
+  Будет отображен как категория предмета, может быть любой, но для собственнных категорий должен быть Translation файл.
+ 
+CanBandage = true,
+If TRUE the item can be used as a Bandage for wounds.
+ 
+BandagePower    =   4,
+Defines how good a bandage is, higher values make the bandage last longer before it goes Dirty.
+ 
+ReduceInfectionPower     =   50,
+If used, it will reduce infection (NOT Zombie Infection, it reduces regular wound infection, it might slow down zombie infection though, uncofirmed)
+ 
+Tooltip = Tooltip_UseOnHealthPanel,
+Will display tooltip if item is moused over in inventory, requires Translation file that defines the text to display.
+ 
+Known Preset Tooltips:
+Tooltip_Painkillers,
+Tooltip_PillsAntidepressant,
+Tooltip_PillsBetablocker,
+Tooltip_PillsSleeping,
+Tooltip_tissue_tooltip,
+Tooltip_IronSight,
+Tooltip_Scope,
+Tooltip_AmmoStrap,
+Tooltip_Sling,
+Tooltip_FiberglassStock,
+Tooltip_RecoilPad,
+Tooltip_Laser,
+Tooltip_RedDot,
+Tooltip_ChokeTubeFull,
+Tooltip_ChokeTubeImproved,
+Tooltip_Trap,
+Tooltip_Generator,
+Tooltip_UseOnHealthPanel,
+Tooltip_Vitamins,
+ 
+RequiresEquippedBothHands = TRUE,
+If TRUE the item HAS TO be equipped in Both Hands in order to even be carried.
+ 
+TeachedRecipes =   Make Bread Dough,
+If Read the item will teach the character how to make Bread Dough, any Recipe name can be used.
+Typically used with Literature
+ 
+NumberOfPages = 260,
+Defines the number of pages a Skill Book has.
+Typically used with Literature Skill Books
+ 
+SkillTrained = Trapping,
+Defines what skill the Skill Book gives a multiplier to.
+ 
+LvlSkillTrained = 3,
+Minimum skill level required to read the skill book.
+ 
+NumLevelsTrained = 2,
+Amount of skill levels the multiplier will apply to beginning with LvlSkillTrainer.
+ 
+CanBeWrite  =   true,
+If TRUE the item can be used to write on if the character has a Pencil or Pen
+ 
+Weapon Type Only Below: MELEE/RANGED WEAPONS
+ 
+
+MinRange = 0.61,
+
+Defines the minimum range at which the weapon is effective, if the target is closer, he will be pushed away. Possibly 1 = 1 tile.
+
+ 
+
+MaxRange = 1.5,
+Defines the maximum range at which the weapon is effective. Possibly 1 = 1 tile.
+ 
+WeaponSprite = Fireaxe,
+Defines the weapon model used.
+ 
+MinAngle = 0.2,
+Unsure, defines the angle at which the weapon is effective.
+ 
+HitAngleMod = -30,
+Unsure, as above.
+ 
+SwingTime = 3.0,
+Defines the default time it will take for the swing animation to play out.
+ 
+MinimumSwingTime = 3.0,
+Defines the minimum time it will take to swing the melee weapon, affects the speed of animation and DPS.
+ 
+KnockBackOnNoDeath = TRUE,
+If TRUE the weapon will knock back the target if the strike was not lethal.
+ 
+SwingAmountBeforeImpact = 0.002,
+Defines the time from start of the swing before it makes an impact.
+ 
+Categories = Axe,
+Defines the weapon Category. Can be Blunt, Blade, Axe, Improvised, Unarmed
+ 
+SubCategory = Swinging,
+Defines the weapon Sub Category. Can be Swinging, Stab, Firearm
+ 
+ConditionMax = 15,
+Defines the maximum durability of the weapon.
+ 
+ConditionLowerChanceOneIn = 30,
+Defines the chance for weapon condition to lower when used.
+ 
+SplatNumber = 1,
+Unsure, Possible affects how many blood splats comes out after impact.
+ 
+SplatSize = 5,
+Unsure, possible affects how much blood comes out with each splat.
+ 
+SplatBloodOnNoDeath = TRUE,
+Defines whether or not blood comes out if the strike was not lethal.
+ 
+PushBackMod = 0.3,
+Modifies the strength with which the target is pushed back upon impact.
+ 
+MinDamage = 1,
+Defines the minimum damage.
+ 
+MaxDamage = 2.5,
+Defines the maximum damage.
+ 
+MaxHitCount = 2,
+Defines how many targets can be hit with a single attack.
+ 
+DoorDamage = 35,
+Defines the amount of damage done to doors. Doors have 100 HP by default.
+ 
+TreeDamage  =   35,
+Defines the amount of damage done to trees. Trees have 100HP by default.
+ 
+IdleAnim = Idle_Weapon2,
+Defines the idle animation that plays when the character is holding the weapon.
+ 
+SwingAnim = Bat,
+Defines the swinging animation that plays when the weapon is used
+ 
+RunAnim = Run_Weapon2,
+Defines the animation that plays when the character runs with the weapon.
+ 
+CriticalChance = 20,
+Chance to inflict critical, lethal damage upon the target.
+ 
+WeaponWeight = 3,
+Higher values cause exertion faster.
+ 
+KnockdownMod = 2,
+Defines the knockdown modifier, higher values mean it will be easier to knock the target down.
+ 
+TwoHandWeapon = TRUE,
+If true the weapon will be most effective if equipped in both hands.
+ 
+CloseKillMove = Jaw_Stab,
+Defines the type of close kill move, used for knives and some other stabbing weapons only.
+ 
+CantAttackWithLowestEndurance = TRUE,
+If TRUE the weapon can't be used if the character is under Extreme Exertion moodle.
+ 
+EnduranceMod = 0.5,
+Modifies the amount of endurance used up when swinging the weapon. Higher values mean exertion comes on faster.
+ 
+Weapon Type Only Below: RANGED SPECIFIC
+Ranged weapons will use a lot of variables, if not all, used by melee weapons, below you will find variables specific for Ranged Weapons, they would probably all work with a melee weapon, you can experiment.
+ 
+AmmoType = BerettaClip,
+Defines the type of Ammo being used. To the best of my knowledge, reloading requires .lua code.
+ 
+ImpactSound = null,
+Defines the sound created after impact.
+ 
+SwingSound = 9mmShot,
+Defines the attack sound.
+ 
+SoundVolume = 75,
+Defines the volume of attack sound.
+ 
+ToHitModifier = 1.5,
+Unsure, possibly a modifier for a chance to hit the target.
+ 
+NPCSoundBoost = 1.5,
+Unknown. No use as of Build 32. Speculated boost to sound if used by NPC so more zombies hear it and come.
+ 
+Ranged = TRUE,
+Defines if the weapon is a ranged weapon.
+ 
+ProjectileCount = 1,
+Defines the amount of projectiles created by shooting the weapon.
+ 
+ShareDamage = FALSE,
+Unknown effect.
+ 
+IsAimedFirearm = TRUE,
+Defines if the weapon needs to be aimed.
+ 
+UseEndurance = FALSE,
+Defines if using the weapon uses up endurance.
+ 
+MultipleHitConditionAffected = FALSE,
+Unknown.
+ 
+SoundRadius = 150,
+Defines the sound radius, higher values cause more zombies to hear it from more far away.
+ 
+AimingPerkCritModifier = 10,
+Defines Aiming Skill Bonus to Critical Chance
+ 
+AimingPerkRangeModifier = 1.5,
+Defines Aiming Skill Bonus to Range.
+ 
+HitChance = 45,
+Default chance to hit the target.
+ 
+AimingPerkHitChanceModifier = 15,
+Defines Aiming Skill Bonus to Hit Chance.
+ 
+AimingPerkMinAngleModifier = 0.05,
+Defines Aiming Skill Bonus to Min Angle.
+ 
+RecoilDelay = 20,
+Unsure. Defines time that must pass between shots.
+ 
+SoundGain = 1.5,
+Unknown effect.
+ 
+ClipSize = 15,
+Maximum amount of ammo that can go into the weapon. Again, .lua code is required for the weapon to be re loadable.
+ 
+ReloadTime = 10,
+Defines the time needed for the weapon to be reloaded.
+ 
+AimingTime = 40,
+Defines Aiming Difficulty, lower values increase chance to hit with low aiming time.
+ 
+PiercingBullets = TRUE,
+If true, multiple objects can be hit by a single projectile if they are in the right angle.
+ 
+Weapon Type Only Below: THROWN SPECIFIC
+ 
+UseSelf = TRUE,
+If TRUE the item itself will be used up when attacking.
+ 
+PhysicsObject = Aerosolbomb,
+Defines the thrown item sprite.
+ 
+ExplosionPower  =   70,
+Defines the power of the explosion created upon impact.
+ 
+ExplosionRange  =   6,
+Defines the AoE of the explosion.
+ 
+FirePower  =   97,
+Defines the amount of fire that will be created upon impact.
+ 
+FireRange  =   6,
+Defines the AoE of fire.
+ 
+triggerExplosionTimer   =   50,
+Defines the time before exlosion if placed.
+ 
+ExplosionSound  =   smallExplosion,
+Defines the sound of explosion.
+ 
+PlacedSprite = constructedobjects_01_32,
+Defines sprite used if the weapon is placed as a trap.
+
+I hope this helps anyone who wants to create their own items for PZ. Remember, this is just a list of variables, don't use all of them, it's not required. Take a look at items.txt and newitems.txt to see what variables are used by what items and base your items off that.

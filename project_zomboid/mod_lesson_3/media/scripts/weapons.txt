@@ -40,5 +40,6 @@ module cppProstoMod
     BreakSound                = PZ_WoodSnap,
     TreeDamage                = 400,
     MetalValue                = 120,
+    DisplayCategory           = AdminItems,
   }
 }
